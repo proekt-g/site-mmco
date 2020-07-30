@@ -1,5 +1,5 @@
-$default-font: 'Roboto',
-sans-serif;
-$monsterat: 'Montserrat',
-sans-serif;
-$content-width: 1176px;
+$default-font: 'Muller';
+$content-width: 1640px;
+$heightHeader: 0px;
+$heightFooter: 140px;
+$minHeightMain: calc(100vh - (#{$heightHeader} + #{$heightFooter}));
