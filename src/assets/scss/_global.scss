@@ -28,6 +28,10 @@ main {
         font-size: 15px;
         padding-left: 20px;
     }
+    &:hover::after {
+        animation: swing 0.6s ease;
+        animation-iteration-count: 1;
+    }
     &::after {
         content: url(../images/arrow-left-green.svg);
         position: absolute;

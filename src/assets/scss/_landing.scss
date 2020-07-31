@@ -1,4 +1,8 @@
 .landing {
+    padding-bottom: 120px;
+    @media(max-width: 768px) {
+        padding-bottom: 80px;
+    }
     .top {
         height: 177px;
         background-image: url(../images/bg-top.jpg);
@@ -93,6 +97,7 @@
                     color: #ffffff;
                     font-size: 26px;
                     font-weight: 500;
+                    transition: .3s;
                     @media(max-width: 768px) {
                         padding: 0 35px;
                     }
@@ -103,6 +108,9 @@
                     }
                     @media(max-width: 370px) {
                         padding: 0 30px;
+                    }
+                    &:hover {
+                        border-radius: 0;
                     }
                 }
                 &__log {
@@ -116,6 +124,7 @@
                     font-weight: 500;
                     padding: 0 106px;
                     margin-left: 10px;
+                    transition: .3s;
                     @media(max-width: 768px) {
                         padding: 0 60px;
                     }
@@ -127,6 +136,9 @@
                     @media(max-width: 370px) {
                         padding: 0 40px;
                     }
+                    &:hover {
+                        border-radius: 0;
+                    }
                 }
             }
         }
@@ -136,15 +148,24 @@
         @media(max-width: 768px) {
             margin-top: 60px;
         }
-        /*&-block {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin: -30px -7px;
-            &__box {
-                flex: 0 1 20%;
-                margin: 30px 7px;
-            }*/
+        &-out {
+            position: relative;
+            margin-top: 30px;
+            @media(max-width: 500px) {
+                padding: 0 33px;
+            }
+        }
+        &-inner {
+            @media(max-width: 500px) {
+                margin-left: auto;
+                margin-right: auto;
+                position: relative;
+                overflow: hidden;
+                list-style: none;
+                padding: 0;
+                z-index: 1;
+            }
+        }
         &-block {
             padding-top: 40px;
             display: grid;
@@ -160,7 +181,14 @@
             }
             @media(max-width: 500px) {
                 padding-top: 20px;
-                grid-template-columns: repeat(2, 1fr);
+                position: relative;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                display: flex;
+                transition-property: transform;
+                box-sizing: content-box;
+                transform: translate3d(0px, 0px, 0px);
             }
             @media(max-width: 370px) {
                 grid-template-columns: repeat(1, 1fr);
@@ -171,8 +199,13 @@
                 @media(max-width: 768px) {
                     margin: 15px 7px;
                 }
-                @media(max-width: 370px) {
-                    max-width: 100%;
+                @media(max-width: 500px) {
+                    margin: 0;
+                    width: auto;
+                    max-width: none;
+                    height: 100%;
+                    position: relative;
+                    transition-property: transform;
                 }
             }
             &__img {
@@ -191,6 +224,106 @@
                     font-size: 15px;
                 }
             }
+        }
+        &-slider-button-prev {
+            display: none;
+            @media(max-width: 500px) {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translate(0, -50%);
+                cursor: pointer;
+                transition: .3s;
+                &:hover path {
+                    transition: .3s;
+                    fill: #0072BF;
+                }
+            }
+        }
+        &-slider-button-next {
+            display: none;
+            @media(max-width: 500px) {
+                display: block;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate(0, -50%);
+                cursor: pointer;
+                transition: .3s;
+                &:hover path {
+                    transition: .3s;
+                    fill: #0072BF;
+                }
+            }
+        }
+    }
+    .partners {
+        margin-top: 120px;
+        @media(max-width: 768px) {
+            margin-top: 60px;
+        }
+        &-slider {
+            margin: 40px auto;
+            padding: 0 33px;
+            position: relative;
+            @media(max-width: 500px) {
+                margin: 40px 0 0;
+                padding: 0;
+            }
+        }
+    }
+    .swiper-container {
+        @media(max-width: 500px) {
+            overflow: visible;
+        }
+    }
+    .swiper-wrapper {
+        @media(max-width: 500px) {
+            flex-wrap: wrap;
+            margin: -15px -15px;
+            justify-content: space-around;
+        }
+    }
+    .swiper-slide {
+        width: auto;
+        @media(max-width: 500px) {
+            margin: 15px 15px;
+        }
+    }
+    .swiper-slide-duplicate-prev {
+        @media(max-width: 500px) {
+            display: none;
+        }
+    }
+    .slider-button-prev {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        cursor: pointer;
+        transition: .3s;
+        @media(max-width: 500px) {
+            display: none;
+        }
+        &:hover path {
+            transition: .3s;
+            fill: #0072BF;
+        }
+    }
+    .slider-button-next {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+        cursor: pointer;
+        transition: .3s;
+        @media(max-width: 500px) {
+            display: none;
+        }
+        &:hover path {
+            transition: .3s;
+            fill: #0072BF;
         }
     }
 }
