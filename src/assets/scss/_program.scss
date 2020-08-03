@@ -1,215 +1,39 @@
-.region {
+.program {
+    padding-bottom: 120px;
+    @media(max-width: 768px) {
+        padding-bottom: 50px;
+    }
     .top {
         margin-top: 65px;
         @media(max-width: 768px) {
             margin-top: 30px;
         }
-        &-inner {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
         &__title {
             align-self: center;
         }
-        &__date {
-            color: #11937c;
-            font-size: 26px;
-            font-weight: 500;
-            margin-left: 20px;
-            margin-right: 70px;
+        &__t {
+            margin-top: 70px;
             @media(max-width: 768px) {
                 margin-right: 0;
             }
             @media(max-width: 500px) {
                 display: none;
             }
-        }
-    }
-    .preview {
-        margin-top: 65px;
-        @media(max-width: 768px) {
-            margin-top: 30px;
-        }
-        &-inner {
-            display: flex;
-            justify-content: space-between;
-            @media(max-width: 1080px) {
-                flex-wrap: wrap;
-            }
-        }
-        &-info {
-            display: flex;
-            margin-right: 20px;
-            @media(max-width: 1080px) {
-                order: 1;
-                margin-right: 0;
-                flex-wrap: wrap;
-                margin-top: 40px;
-            }
-            @media(max-width: 768px) {
-                margin-top: 70px;
-            }
-            &__img {
-                flex: 0 0 140px;
-                margin-right: 45px;
-                @media(max-width: 1080px) {
-                    margin-right: 0;
-                    margin-bottom: 30px;
-                }
-                @media(max-width: 500px) {
-                    margin: 0 auto 30px;
-                }
-                img {
-                    max-width: 100%;
-                }
-            }
-            &-text {
-                &__subtitle {
-                    color: #11937c;
-                    font-size: 26px;
-                    font-weight: 500;
-                    margin: 12px 0 14px;
-                    @media(max-width: 768px) {
-                        margin: 20px 0 10px;
-                    }
-                    @media(max-width: 500px) {
-                        font-size: 20px;
-                    }
-                }
-                &__information {
-                    max-width: 660px;
-                    color: #454545;
-                    font-size: 20px;
-                    font-weight: 400;
-                    line-height: 22px;
-                    @media(max-width: 1080px) {
-                        max-width: 100%;
-                    }
-                    @media(max-width: 500px) {
-                        font-size: 15px;
-                        line-height: 17px;
-                    }
-                }
-            }
-        }
-        &__btn {
-            color: #ffffff;
-            font-size: 26px;
-            font-weight: 500;
-            height: 65px;
-            line-height: 65px;
-            border-radius: 31px;
-            background-color: #11937c;
-            display: block;
-            padding: 0 75px;
-            transition: .3s;
-            @media(max-width: 500px) {
-                flex: 0 1 100%;
-                text-align: center;
-                padding: 0;
-                font-size: 15px;
-                line-height: 43px;
-                height: 43px;
-            }
-            &:hover {
-                border-radius: 0;
-            }
-        }
-    }
-    .regions {
-        margin-top: 80px;
-        @media(max-width: 768px) {
-            margin-top: 60px;
-        }
-        &-slider {
-            margin-top: 40px;
-            padding: 0 33px;
-            position: relative;
-        }
-    }
-    .partners {
-        margin-top: 120px;
-        @media(max-width: 768px) {
-            margin-top: 60px;
-        }
-        &-slider {
-            margin: 40px auto;
-            padding: 0 33px;
-            position: relative;
-            @media(max-width: 500px) {
-                margin: 40px 0 0;
-                padding: 0;
-            }
-        }
-        .swiper-wrapper {
-            @media(max-width: 500px) {
-                flex-wrap: wrap;
-                margin: -15px -15px;
-                justify-content: space-around;
-            }
-        }
-        .swiper-slide {
-            @media(max-width: 500px) {
-                margin: 15px 15px;
-            }
-        }
-        .swiper-slide-duplicate-prev {
-            @media(max-width: 500px) {
-                display: none;
-            }
-        }
-        .slider-button-prev {
-            @media(max-width: 500px) {
-                display: none;
-            }
-        }
-        .slider-button-next {
-            @media(max-width: 500px) {
-                display: none;
-            }
-        }
-    }
-    .swiper-slide {
-        width: auto;
-    }
-    .slider-button-prev {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translate(0, -50%);
-        cursor: pointer;
-        transition: .3s;
-        &:hover path {
-            transition: .3s;
-            fill: #0072BF;
-        }
-    }
-    .slider-button-next {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translate(0, -50%);
-        cursor: pointer;
-        transition: .3s;
-        &:hover path {
-            transition: .3s;
-            fill: #0072BF;
         }
     }
     .activity {
         margin-top: 120px;
         @media(max-width: 768px) {
-            margin-top: 70px;
+            margin-top: 30px;
         }
         &-filter {
             margin-top: 50px;
-            max-width: 1240px;
+            max-width: 1560px;
             @media(max-width: 768px) {
                 margin-top: 30px;
             }
             &__input {
-                max-width: 913px;
+                max-width: 1234px;
                 width: 100%;
                 display: block;
                 line-height: 65px;
@@ -269,7 +93,8 @@
                     height: 43px;
                     flex: 0 1 100%;
                 }
-                &:first-child {
+                &:first-child,
+                &:nth-child(2) {
                     .activity-filter__main {
                         width: 270px;
                         @media(max-width: 768px) {
@@ -284,6 +109,8 @@
                     @media(max-width: 768px) {
                         margin: 10px 0 0 0;
                     }
+                }
+                &:nth-child(3) {
                     .activity-filter__main {
                         width: 492px;
                         @media(max-width: 768px) {
@@ -291,7 +118,7 @@
                         }
                     }
                 }
-                &:nth-child(3) {
+                &:nth-child(4) {
                     .activity-filter__main {
                         width: 377px;
                         @media(max-width: 768px) {

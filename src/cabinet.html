@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-head">
+            <div class="header-head__img">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="assets/images/menu-top-mobail.jpg">
+                    <img src="assets/images/menu-top.jpg" alt="">
+                </picture>
+            </div>
+            <div class="header-head__title">Архангельская область</div>
+        </div>
+        <nav class="header-menu">
+            <div class="header-menu__desktop">
+                <div class="header-menu__item header-menu__item_active"><a class="header-menu__link" href="#">Мой кабинет</a></div>
+                <div class="header-menu__item"><a class="header-menu__link" href="#">Трансляции</a></div>
+                <div class="header-menu__item"><a class="header-menu__link" href="#">Деловая программа</a></div>
+                <div class="header-menu__item"><a class="header-menu__link" href="#">Выставка</a></div>
+            </div>
+        </nav>
+        <div class="header-help">
+            <div class="header-help-icon">
+                <a class="header-help-icon__setings" href="#"><img src="assets/images/setings.svg" alt=""></a>
+                <a class="header-help-icon__info" href="#"><img src="assets/images/info.svg" alt=""></a>
+            </div>
+            <div class="header-help-inner">
+                <div class="header-help__title">Горячая линия</div>
+                <a class="header-help__phone" href="tel:+79653852821">+7 (965) 385 - 2821</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="burger">меню</div>
+        <article class="cabinet">
+            <section class="you">
+                <div class="container-menu">
+                    <div class="you-head">
+                        <div class="you-head__img">
+                            <picture>
+                                <source media="(max-width: 500px)" srcset="assets/images/avatar-cabinet-mobail.jpg">
+                                <img src="assets/images/avatar-cabinet.jpg" alt="">
+                            </picture>
+                        </div>
+                        <div class="you-head-info">
+                            <div class="you-head-info__name title-def-2">Василий Петров</div>
+                            <a class="you-head-info__settings" href="#">Настроить мой профиль</a>
+                            <div class="you-head-info__prof">Учитель</div>
+                            <div class="you-head-info__city">г. Хабаровск</div>
+                        </div>
+                    </div>
+                    <div class="you-btn">
+                        <a class="you-btn__like" href="#"><span class="cabinet-btn__text">Избранное</span></a>
+                        <a class="you-btn__program" href="#"><span class="cabinet-btn__text">Программа моего региона</span></a>
+                    </div>
+                </div>
+            </section>
+            <section class="broadcast">
+                <div class="container-menu">
+                    <div class="broadcast__title title-def-2">Трансляция Уфа</div>
+                    <div class="broadcast-block">
+                        <a class="broadcast-block__box" href="#">
+                            <div class="broadcast-block__img"><img src="assets/images/broadcast-1.jpg" alt=""></div>
+                            <div class="broadcast-block__name">Название трансляции</div>
+                        </a>
+                        <a class="broadcast-block__box" href="#">
+                            <div class="broadcast-block__img"><img src="assets/images/broadcast-1.jpg" alt=""></div>
+                            <div class="broadcast-block__name">Название трансляции</div>
+                        </a>
+                        <a class="broadcast-block__box" href="#">
+                            <div class="broadcast-block__img"><img src="assets/images/broadcast-1.jpg" alt=""></div>
+                            <div class="broadcast-block__name">Название трансляции</div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="baner">
+                <div class="container-menu">
+                    <div class="baner__img">
+                        <picture>
+                            <source media="(max-width: 500px)" srcset="assets/images/baner-mobail.jpg">
+                            <img src="assets/images/baner.jpg" alt="">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+            <section class="interesting">
+                <div class="container-menu">
+                    <div class="interesting__title title-def-2">Интересные стенды</div>
+                    <div class="interesting-block">
+                        <div class="interesting-block__box">
+                            <a class="interesting-block__img" href="#"><img src="assets/images/interesting-1.png" alt=""></a>
+                            <div class="interesting-block__title">Adobe</div>
+                        </div>
+                        <div class="interesting-block__box">
+                            <a class="interesting-block__img" href="#"><img src="assets/images/interesting-2.png" alt=""></a>
+                            <div class="interesting-block__title">РФ </div>
+                        </div>
+                        <div class="interesting-block__box">
+                            <a class="interesting-block__img" href="#"><img src="assets/images/interesting-1.png" alt=""></a>
+                            <div class="interesting-block__title">Dropbox</div>
+                        </div>
+                        <div class="interesting-block__box">
+                            <a class="interesting-block__img" href="#"><img src="assets/images/interesting-1.png" alt=""></a>
+                            <div class="interesting-block__title">Lego</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <a href="#" class="footer__logo"><img src="assets/images/logo.svg" alt=""></a>
+                <div class="footer-contacts">
+                    <p class="footer-contacts__text">Телефон горячей линии</p>
+                    <a href="tel:+79653852821" class="footer-contacts__phone">+7 (965) 385 - 2821</a>
+                    <a href="mailto:info@mmco-expo.ru" class="footer-contacts__mail">info@mmco-expo.ru</a>
+                </div>
+                <div class="footer-info">
+                    <p class="footer-info__text">Мероприятие проходит на</p>
+                    <a href="#" class="footer-info__link">платформа ММСО</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.min.js"></script>
+</body>
+
+</html>

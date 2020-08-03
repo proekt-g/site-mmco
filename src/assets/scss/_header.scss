@@ -1,0 +1,170 @@
+.header {
+    background-color: #11937c;
+    border-radius: 0 30px 30px 0;
+    position: fixed;
+    z-index: 101;
+    left: 0;
+    width: 278px;
+    max-height: 100vh;
+    height: 100%;
+    padding: 20px 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(../images/bg-menu.png);
+    background-repeat: no-repeat;
+    background-position: 0 calc(100% - 110px);
+    @media(max-width: 768px) {
+        left: 100vw;
+    }
+    &.fix {
+        position: absolute;
+        bottom: calc(0px + #{$heightFooter});
+    }
+    &.open {
+        animation: 250ms linear 0s forwards alternate menu;
+        width: 100%;
+        border-radius: 0;
+        background-position: 50% calc(100% - 80px);
+        padding: 20px;
+        overflow: hidden;
+        .header {
+            &-head__title {
+                font-size: 18px;
+            }
+            &-menu {
+                margin-left: 0;
+                margin-top: 50px;
+                text-align: center;
+                flex-grow: 1;
+                &__item {
+                    display: block;
+                    margin: 0;
+                    height: auto;
+                    padding-left: 0;
+                    margin-top: 20px;
+                    &_active {
+                        background: none;
+                        .header-menu__link {
+                            color: #fcc40e;
+                        }
+                    }
+                }
+            }
+            &-help {
+                display: flex;
+                justify-content: space-between;
+                &-icon {
+                    order: 1;
+                    align-self: center;
+                }
+                &-inner {
+                    text-align: left;
+                }
+                &__title {
+                    font-size: 15px;
+                    font-weight: 400;
+                    margin: 15px 0 10px;
+                }
+                &__phone {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    &-head {
+        text-align: center;
+        &__img {
+            max-width: 141px;
+            margin: 0 auto 10px;
+            img {
+                max-width: 100%;
+                border-radius: 50%;
+            }
+        }
+        &__title {
+            margin: 0 auto;
+            max-width: 190px;
+            color: #ffffff;
+            font-size: 26px;
+            font-weight: 500;
+        }
+    }
+    &-menu {
+        margin-top: 20px;
+        margin-left: 15px;
+        &__desktop {
+            display: flex;
+            flex-direction: column;
+        }
+        &__item {
+            width: 100%;
+            height: 130px;
+            margin: -30px 0;
+            display: flex;
+            align-items: center;
+            padding-left: 19px;
+            &:first-child {
+                margin: 0 0 -30px;
+            }
+            &:last-child {
+                margin: -30px 0 0;
+            }
+            &.header-menu__item_active {
+                background-image: url(../images/bg-menu-item.svg);
+                background-position: left;
+                .header-menu__link {
+                    color: #11937c;
+                }
+            }
+        }
+        &__link {
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: 500;
+            transition: .3s;
+            &:hover {
+                color: #ee7f89;
+            }
+        }
+    }
+    &-help {
+        text-align: center;
+        margin-top: 10px;
+        &-icon {
+            display: flex;
+            justify-content: center;
+            margin: 0 -7.5px;
+            &__setings,
+            &__info {
+                margin: 0 7.5px;
+                max-width: 39px;
+                transition: .3s;
+                &:hover {
+                    transform: scale(1.1);
+                }
+                img {
+                    max-width: 100%;
+                    fill: #000;
+                }
+            }
+        }
+        &__title {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 15px 0 5px;
+        }
+        &__phone {
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: 500;
+            transition: .3s;
+            &:hover {
+                color: #ee7f89;
+            }
+        }
+    }
+}
