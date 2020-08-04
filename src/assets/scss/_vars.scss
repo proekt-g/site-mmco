@@ -341,3 +341,21 @@ $heightFooter: 144px;
         left: 0;
     }
 }
+
+@-webkit-keyframes list {
+    from {
+        height: 0px;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+@keyframes list {
+    from {
+        height: 0px;
+    }
+    to {
+        height: 100%;
+    }
+}

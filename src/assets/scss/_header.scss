@@ -115,6 +115,12 @@
             &.header-menu__item_active {
                 background-image: url(../images/bg-menu-item.svg);
                 background-position: left;
+                &.silver {
+                    background-image: url(../images/menu-top-silver.svg);
+                    @media(max-width: 768px) {
+                        background-image: none;
+                    }
+                }
                 .header-menu__link {
                     color: #11937c;
                 }

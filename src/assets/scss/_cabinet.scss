@@ -9,10 +9,32 @@
             &__img {
                 margin: 0 25px 0 0;
                 flex: 0 0 141px;
+                height: 141px;
+                background-color: #11937c;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @media(max-width: 500px) {
+                    flex: 0 0 102px;
+                    height: 102px;
+                }
+                span {
+                    font-size: 56px;
+                    @media(max-width: 500px) {
+                        font-size: 36px;
+                    }
+                }
                 img {
                     max-width: 100%;
                     border-radius: 50%;
                 }
+            }
+            &__first {
+                color: #ee7f89;
+            }
+            &__second {
+                color: #fcc40e;
             }
             &-info {
                 margin-left: 25px;

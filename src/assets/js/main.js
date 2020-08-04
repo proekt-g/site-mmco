@@ -94,7 +94,7 @@ window.addEventListener('load', function() {
     }
 
     function checkScroll() {
-        if (window.innerWidth > 768) {
+        if (window.innerWidth > 768 && document.querySelector('.exhebition') === null) {
             let target = document.querySelector('.footer');
             let targetPosition = {
                     top: window.pageYOffset + target.getBoundingClientRect().top,
@@ -119,7 +119,33 @@ window.addEventListener('load', function() {
         }
     }
 
+    function clickListExhiition() {
+        $('.top-navigation-list__main').not($(this)).removeClass('active');
+        $('.top-navigation-list__submain').not($(this).next()).slideUp(300);
+        $(this).toggleClass('active').next().slideToggle(300);
+    }
+    // svg hover
+    function popUpCompanyLogo() {
+        document.querySelector('.company-box').classList.toggle('visibility');
+    }
+    // /svg hover
+    // popup
+    function callModalWindow() {
+        document.querySelector('.modal-overlay').classList.toggle('active');
+        document.querySelector('.modal').classList.toggle('active');
+        document.querySelector('body').classList.toggle('block');
+    }
+    // /popup
+
+
     checkWindowWidth();
+    // Popup вызов
+    if (document.querySelector('.popup') !== null) callModalWindow();
+    // /Popup вызов
+
+    // document.querySelector('.map__img').addEventListener('click', popUpCompanyLogo);
+    document.querySelector('.top-navigation-list__main').addEventListener('click', clickListExhiition);
+    if (document.querySelector('.modal-content-log__btn') !== null) document.querySelector('.modal-content-log__btn').addEventListener('click', ajaxRequest('modal-log', 'test.php'))
     document.querySelector('.burger').addEventListener('click', clickBurger);
     if (document.querySelector('.activity-filter__input') !== null) document.querySelector('.activity-filter__input').addEventListener('keydown', pushEnterSearchForm);
     document.querySelectorAll('.content-block-avatar__img').forEach(function(item) {
