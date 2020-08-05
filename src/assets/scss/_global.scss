@@ -88,6 +88,7 @@ main {
     font-weight: 500;
     right: 20px;
     top: 30px;
+    z-index: 100;
     @media(max-width: 768px) {
         display: block;
     }

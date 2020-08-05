@@ -1,0 +1,16 @@
+.player {
+    .top {
+        padding-top: 65px;
+        @media(max-width: 768px) {
+            padding-top: 30px;
+        }
+    }
+    .global {
+        margin-top: 70px;
+        &-content {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

@@ -8,6 +8,8 @@ window.addEventListener('load', function() {
     function checkWindowWidth() {
         if (window.innerWidth <= 500) {
             if (document.querySelector('.landing .regions-inner') !== null) swiperRegions = createSlider('.regions-inner', 400, 'auto', 25, true, { delay: 2000 }, { nextEl: '.regions-slider-button-next', prevEl: '.regions-slider-button-prev' }, {}, 'regions-block', 'regions-block__box', 15);
+            if (document.querySelector('.activity .top-content-btn') !== null) document.querySelector('.activity .info .container-menu').insertAdjacentElement('beforeend', document.querySelector('.activity .top-content-btn'));
+
         }
         if (window.innerWidth > 500) {
             if (document.querySelector('.landing .swiper-container') !== null) mySwiper = createSlider('.swiper-container', 400, 'auto', 25, true, { delay: 2000 }, { nextEl: '.slider-button-next', prevEl: '.slider-button-prev' }, { 500: { spaceBetween: 50 } });
@@ -37,8 +39,8 @@ window.addEventListener('load', function() {
     function clickFilterItem() {
         $('.activity-filter__item').not($($(this).parent())).removeClass('open');
         $('.activity-filter__main').not($(this)).removeClass('active');
-        $('.activity-filter__submain').not($(this).next()).slideUp(300);
-        $(this).toggleClass('active').next().slideToggle(300);
+        $('.activity-filter__submain').not($(this).siblings('.activity-filter__submain')).slideUp(300);
+        $(this).toggleClass('active').siblings('.activity-filter__submain').slideToggle(300);
         if (this !== undefined) this.closest('.activity-filter__item').classList.toggle('open');
     }
 
@@ -143,15 +145,18 @@ window.addEventListener('load', function() {
     if (document.querySelector('.popup') !== null) callModalWindow();
     // /Popup вызов
 
-    // document.querySelector('.map__img').addEventListener('click', popUpCompanyLogo);
-    document.querySelector('.top-navigation-list__main').addEventListener('click', clickListExhiition);
+    if (document.querySelector('.company-box__close') !== null) document.querySelector('.company-box__close').addEventListener('click', popUpCompanyLogo);
+    if (document.querySelector('.top-navigation-list__main') !== null) document.querySelector('.top-navigation-list__main').addEventListener('click', clickListExhiition);
     if (document.querySelector('.modal-content-log__btn') !== null) document.querySelector('.modal-content-log__btn').addEventListener('click', ajaxRequest('modal-log', 'test.php'))
-    document.querySelector('.burger').addEventListener('click', clickBurger);
+    if (document.querySelector('.burger') !== null) document.querySelector('.burger').addEventListener('click', clickBurger);
     if (document.querySelector('.activity-filter__input') !== null) document.querySelector('.activity-filter__input').addEventListener('keydown', pushEnterSearchForm);
     document.querySelectorAll('.content-block-avatar__img').forEach(function(item) {
         item.addEventListener('click', clickAvatar);
     });
     document.querySelectorAll('.activity-filter__submain li').forEach(function(item) {
+        item.addEventListener('click', clickFilterSubitem);
+    });
+    document.querySelectorAll('.activity-filter__element').forEach(function(item) {
         item.addEventListener('click', clickFilterSubitem);
     });
     document.querySelectorAll('.activity-filter__main').forEach(function(item) {
