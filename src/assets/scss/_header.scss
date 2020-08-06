@@ -122,6 +122,12 @@
                         background-image: none;
                     }
                 }
+                &.fa {
+                    background-image: url(../images/bg-menu-item-fa.svg);
+                    @media(max-width: 768px) {
+                        background-image: none;
+                    }
+                }
                 .header-menu__link {
                     color: #11937c;
                 }

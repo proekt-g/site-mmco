@@ -2,6 +2,7 @@ window.addEventListener('load', function() {
 
     let mySwiper;
     let swiperRegions;
+    let bufferUrlVideo;
 
     if (document.querySelector('.region .swiper-container') !== null) swiperRegions = createSlider('.regions .swiper-container', 400, 'auto', 25, true, { delay: 2000 }, { nextEl: '.regions .slider-button-next', prevEl: '.regions .slider-button-prev' }, { 1400: { slidesPerView: 12 } });
 
@@ -126,6 +127,35 @@ window.addEventListener('load', function() {
         $('.top-navigation-list__submain').not($(this).next()).slideUp(300);
         $(this).toggleClass('active').next().slideToggle(300);
     }
+
+    function clickVideoMain() {
+        $('.information-inner-gallery').fadeToggle();
+        document.querySelector('.information-inner-help').classList.toggle('short');
+        $(this).fadeToggle();
+        setTimeout(function() {
+            $('.information-company__iframe').fadeToggle();
+            bufferUrlVideo = document.querySelector('.information-company__video iframe').src;
+            document.querySelector('.information-company__video iframe').src += '?autoplay=1';
+        }, 650);
+
+    }
+
+    function clickCloseVideo() {
+        $('.information-company__iframe').fadeToggle();
+        document.querySelector('.information-company__video iframe').src = bufferUrlVideo;
+        setTimeout(function() {
+            $('.information-inner-gallery').fadeToggle();
+            document.querySelector('.information-inner-help').classList.toggle('short');
+            $('.information-company__video img').fadeToggle();
+        }, 650);
+    }
+
+    function clickGallery() {
+        document.querySelector('.information-inner-help').classList.toggle('hidden');
+        this.classList.toggle('open');
+        document.querySelector('.information-material').classList.toggle('hidden');
+        $('.information-inner-gallery-block').fadeOut();
+    }
     // svg hover
     function popUpCompanyLogo() {
         document.querySelector('.company-box').classList.toggle('visibility');
@@ -145,6 +175,9 @@ window.addEventListener('load', function() {
     if (document.querySelector('.popup') !== null) callModalWindow();
     // /Popup вызов
 
+    if (document.querySelector('.information-inner-gallery') !== null) document.querySelector('.information-inner-gallery').addEventListener('click', clickGallery);
+    if (document.querySelector('.information-company__close') !== null) document.querySelector('.information-company__close').addEventListener('click', clickCloseVideo);
+    if (document.querySelector('.information-company__video') !== null) document.querySelector('.information-company__video img').addEventListener('click', clickVideoMain);
     if (document.querySelector('.company-box__close') !== null) document.querySelector('.company-box__close').addEventListener('click', popUpCompanyLogo);
     if (document.querySelector('.top-navigation-list__main') !== null) document.querySelector('.top-navigation-list__main').addEventListener('click', clickListExhiition);
     if (document.querySelector('.modal-content-log__btn') !== null) document.querySelector('.modal-content-log__btn').addEventListener('click', ajaxRequest('modal-log', 'test.php'))
