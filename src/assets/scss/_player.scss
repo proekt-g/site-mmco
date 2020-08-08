@@ -1,4 +1,8 @@
 .player {
+    .simplebar-track {
+        height: 90%;
+        margin: auto 0;
+    }
     .top {
         padding-top: 65px;
         @media(max-width: 768px) {
