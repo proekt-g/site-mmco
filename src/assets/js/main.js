@@ -123,12 +123,18 @@ window.addEventListener('load', function() {
     }
 
     function clickFilterSubitem() {
-        let buffText;
+        let buffText,
+            bufferId;
         buffText = this.closest('.activity-filter__item').querySelector('.activity-filter__main').textContent;
         this.closest('.activity-filter__item').querySelector('input').value = this.id;
+        bufferId = this.closest('.activity-filter__item').querySelector('.activity-filter__main').id;
+        this.closest('.activity-filter__item').querySelector('.activity-filter__main').id = this.id;
+        if (bufferId === '') this.id = 'def';
+        else this.id = bufferId;
         this.closest('.activity-filter__item').querySelector('.activity-filter__main').textContent = this.textContent;
         this.textContent = buffText;
         this.closest('.activity-filter__item').classList.add('purpure');
+
         clickFilterItem();
         ajaxRequest('activity-filter', 'test.php');
     }
