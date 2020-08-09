@@ -126,6 +126,9 @@
             margin-top: 40px;
             padding: 0 33px;
             position: relative;
+            &.hidden {
+                padding: 0;
+            }
         }
     }
     .partners {
@@ -150,6 +153,9 @@
             }
         }
         .swiper-slide {
+            &.hidden {
+                margin-right: 20px;
+            }
             @media(max-width: 500px) {
                 margin: 15px 15px;
             }
@@ -172,6 +178,12 @@
     }
     .swiper-slide {
         width: auto;
+        &.hidden {
+            margin-right: 20px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
     }
     .slider-button-prev {
         position: absolute;
@@ -180,6 +192,9 @@
         transform: translate(0, -50%);
         cursor: pointer;
         transition: .3s;
+        &.hidden {
+            display: none;
+        }
         &:hover path {
             transition: .3s;
             fill: #0072BF;
@@ -192,6 +207,9 @@
         transform: translate(0, -50%);
         cursor: pointer;
         transition: .3s;
+        &.hidden {
+            display: none;
+        }
         &:hover path {
             transition: .3s;
             fill: #0072BF;
