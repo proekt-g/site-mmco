@@ -1,11 +1,11 @@
 document.onreadystatechange = function() {
     if (document.readyState === "interactive") {
 
-        if (window.innerWidth <= 1080) {
+        if (window.innerWidth <= 1080 && document.querySelector('.master .container-menu') !== null) {
             document.querySelector('.master .container-menu').insertAdjacentElement('beforeend', document.querySelector('.top-contact'));
             document.querySelector('.information-material').insertAdjacentElement('beforebegin', document.querySelector('.information-company-info-information__btn'));
         }
-        if (window.innerWidth <= 1800) {
+        if (window.innerWidth <= 1800 && document.querySelector('.information-inner') !== null) {
             document.querySelector('.information-inner').insertAdjacentElement('afterend', document.querySelector('.information-company__video'));
             document.querySelector('.information-material').insertAdjacentElement('afterend', document.querySelector('.information-material-gallery'));
             document.querySelector('.information-material').insertAdjacentElement('afterend', document.querySelector('.information-inner-gallery'));
@@ -445,4 +445,43 @@ window.addEventListener('load', function() {
     });
     window.addEventListener('resize', checkWindowWidth);
     window.addEventListener('scroll', checkScroll);
+
+    // new.js **********************
+
+
+    let $menuBurger = document.querySelector('.menu__burger');
+    let swiperNewPage;
+
+    if(document.querySelector('.new-partners') !== null) {
+        swiperNewPage = new Swiper('.swiper-container', {
+            // loop: true,
+           
+             
+            // width: 880,
+            // slidesOffsetBefore: 20,
+            spaceBetween: 20,
+            slidesPerColumn: 5,
+            slidesPerView: 1,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                501: {
+                    slidesPerColumn: 1,
+                    slidesPerView: 'auto',
+                    spaceBetween: 45,
+                }
+            }
+        })} 
+    
+    function clickBurgerMenu(){
+        this.closest('.menu').classList.toggle(`${this.closest('.menu').classList[0]}--open`);
+    }
+
+
+    if($menuBurger !== null) $menuBurger.addEventListener('click', clickBurgerMenu, false);
+
+
+    // /new.js **************************
 });

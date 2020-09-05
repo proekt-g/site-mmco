@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-head">
+            <div class="header-head__img">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="assets/images/menu-top-mobail.jpg">
+                    <img src="assets/images/menu-top.jpg" alt="">
+                </picture>
+            </div>
+            <div class="header-head__title">Архангельская область</div>
+        </div>
+        <nav class="header-menu">
+            <div class="header-menu__desktop">
+                <div class="header-menu__item"><a class="header-menu__link" href="#">Мой кабинет</a></div>
+                <div class="header-menu__item"><a class="header-menu__link" href="#">Трансляции</a></div>
+                <div class="header-menu__item header-menu__item_active"><a class="header-menu__link" href="#">Деловая программа</a></div>
+                <div class="header-menu__item "><a class="header-menu__link" href="#">Выставка</a></div>
+            </div>
+        </nav>
+        <div class="header-help">
+            <div class="header-help-icon">
+                <a class="header-help-icon__setings" href="#"><img src="assets/images/setings.svg" alt=""></a>
+                <a class="header-help-icon__info" href="#"><img src="assets/images/info.svg" alt=""></a>
+            </div>
+            <div class="header-help-inner">
+                <div class="header-help__title">Горячая линия</div>
+                <a class="header-help__phone" href="tel:+79653852821">+7 (965) 385 - 2821</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="burger">меню</div>
+        <article class="business">
+            <section class="top">
+                <div class="container-menu">
+                    <div class="top-inner">
+                        <div class="top__title title-def-2">Деловая программа</div>
+                        <div class="top-btn">
+                            <a class="top-btn__program" href="#">Программа всех регионов</a>
+                            <a class="top-btn__speaker" href="#">Спикеры</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="activity">
+                <div class="container-menu">
+                    <div class="activity-filter">
+                        <form action="" method="post" id="business-filter">
+                            <input name="search" class="activity-filter__input" type="text" placeholder="Введите ваш запрос для поиска...">
+                            <div class="activity-filter-inner">
+                                <div class="activity-filter__item">
+                                    <div class="activity-filter__main">Регион</div>
+                                    <div class="activity-filter-support"></div>
+                                    <ul class="activity-filter__submain big">
+
+                                        <li class="activity-filter__element" id="date1">
+                                            <div class="activity-filter__img"><img src="assets/images/avatar60.jpg" alt=""></div>
+                                            <div class="activity-filter__title">Архангельская область</div>
+                                        </li>
+                                        <li class="activity-filter__element" id="date2">
+                                            <div class="activity-filter__img"><img src="assets/images/avatar60.jpg" alt=""></div>
+                                            <div class="activity-filter__title">Архангельская область</div>
+                                        </li>
+                                        <li class="activity-filter__element" id="date3">
+                                            <div class="activity-filter__img"><img src="assets/images/avatar60.jpg" alt=""></div>
+                                            <div class="activity-filter__title">Архангельская область</div>
+                                        </li>
+                                        <li class="activity-filter__element" id="date4">
+                                            <div class="activity-filter__img"><img src="assets/images/avatar60.jpg" alt=""></div>
+                                            <div class="activity-filter__title">Архангельская область</div>
+                                        </li>
+                                        <li class="activity-filter__element" id="date5">
+                                            <div class="activity-filter__img"><img src="assets/images/avatar60.jpg" alt=""></div>
+                                            <div class="activity-filter__title">Архангельская область</div>
+                                        </li>
+                                        <li class="activity-filter__element" id="date6">
+                                            <div class="activity-filter__img"><img src="assets/images/avatar60.jpg" alt=""></div>
+                                            <div class="activity-filter__title">Архангельская область</div>
+                                        </li>
+                                        <li class="activity-filter__element" id="date7">
+                                            <div class="activity-filter__img"><img src="assets/images/avatar60.jpg" alt=""></div>
+                                            <div class="activity-filter__title">Архангельская область</div>
+                                        </li>
+                                        <li class="activity-filter__element" id="date8">
+                                            <div class="activity-filter__img"><img src="assets/images/avatar60.jpg" alt=""></div>
+                                            <div class="activity-filter__title">Архангельская область</div>
+                                        </li>
+                                        <li class="activity-filter__element" id="date9">
+                                            <div class="activity-filter__img"><img src="assets/images/avatar60.jpg" alt=""></div>
+                                            <div class="activity-filter__title">Архангельская область</div>
+                                        </li>
+                                        <li class="activity-filter__element" id="date10">
+                                            <div class="activity-filter__img"><img src="assets/images/avatar60.jpg" alt=""></div>
+                                            <div class="activity-filter__title">Архангельская область</div>
+                                        </li>
+                                        <li class="activity-filter__element" id="date11">
+                                            <div class="activity-filter__img"><img src="assets/images/avatar60.jpg" alt=""></div>
+                                            <div class="activity-filter__title">Архангельская область</div>
+                                        </li>
+                                        <li class="activity-filter__element" id="date12">
+                                            <div class="activity-filter__img"><img src="assets/images/avatar60.jpg" alt=""></div>
+                                            <div class="activity-filter__title">Архангельская область</div>
+                                        </li>
+                                    </ul>
+                                    <input type="text" name="region" value="" readonly>
+                                </div>
+                                <div class="activity-filter__item">
+                                    <div class="activity-filter__main">Дата</div>
+                                    <div class="activity-filter-support"></div>
+                                    <ul class="activity-filter__submain calendar">
+                                        <div class="activity-filter__montt">Август</div>
+                                        <div class="activity-filter-page">
+                                            <div class="activity-filter-string__day">ПН</div>
+                                            <div class="activity-filter-string__day">ВТ</div>
+                                            <div class="activity-filter-string__day">СР</div>
+                                            <div class="activity-filter-string__day">ЧТ</div>
+                                            <div class="activity-filter-string__day">ПТ</div>
+                                            <div class="activity-filter-string__day">СБ</div>
+                                            <div class="activity-filter-string__day">ВС</div>
+                                            <div class="activity-filter__element block" id="date1">13</div>
+                                            <div class="activity-filter__element block" id="date2">14</div>
+                                            <div class="activity-filter__element active" id="date3">15</div>
+                                            <div class="activity-filter__element" id="date4">16</div>
+                                            <div class="activity-filter__element" id="date5">17</div>
+                                            <div class="activity-filter__element block" id="date13">18</div>
+                                            <div class="activity-filter__element block" id="date14">19</div>
+                                            <div class="activity-filter__element" id="date15">20</div>
+                                            <div class="activity-filter__element" id="date16">21</div>
+                                            <div class="activity-filter__element" id="date17">22</div>
+                                            <div class="activity-filter__element" id="date18">23</div>
+                                            <div class="activity-filter__element" id="date19">24</div>
+                                            <div class="activity-filter__element" id="date20">25</div>
+                                            <div class="activity-filter__element" id="date21">26</div>
+                                            <div class="activity-filter__element" id="date22">27</div>
+                                            <div class="activity-filter__element" id="date23">28</div>
+                                            <div class="activity-filter__element" id="date24">29</div>
+                                            <div class="activity-filter__element" id="date25">30</div>
+                                            <div class="activity-filter__element" id="date26">31</div>
+                                        </div>
+                                    </ul>
+                                    <input type="text" name="date" value="" readonly>
+                                </div>
+                                <div class="activity-filter__item">
+                                    <div class="activity-filter__main">Теги</div>
+                                    <ul class="activity-filter__submain">
+                                        <li id="plus1">Дата 1 Дата 1 </li>
+                                        <li id="plus2">Дата 2</li>
+                                        <li id="plus3">Дата 3</li>
+                                        <li id="plus4">Дата 4</li>
+                                        <li id="plus4">Дата 4</li>
+                                        <li id="plus4">Дата 4</li>
+                                        <li id="plus4">Дата 4</li>
+                                        <li id="plus4">Дата 4</li>
+                                        <li id="plus4">Дата 4</li>
+                                        <li id="plus4">Дата 4</li>
+                                        <li id="plus4">Дата 4</li>
+                                        <li id="plus4">Дата 4</li>
+                                        <li id="plus4">Дата 4</li>
+                                        <li id="plus4">Дата 4</li>
+                                        <li id="plus4">Дата 4</li>
+                                        <li id="plus4">Дата 4</li>
+                                    </ul>
+                                    <input type="text" name="plus" value="" readonly>
+                                </div>
+                                <div class="activity-filter__item">
+                                    <div class="activity-filter__main">Зал</div>
+                                    <ul class="activity-filter__submain">
+                                        <li id="sergey1">Дата 1 Дата 1</li>
+                                        <li id="sergey2">Дата 2</li>
+                                        <li id="sergey3">Дата 3</li>
+                                        <li id="sergey4">Дата 4</li>
+                                    </ul>
+                                    <input type="text" name="sergey" value="" readonly>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="container-menu">
+                    <div class="content-block">
+                        <div class="content-block__box">
+                            <div class="content-block-inner">
+                                <div class="content-block-date">
+                                    <div class="content-block-date__day">27.07.2020</div>
+                                    <div class="content-block-date__time">10:00 - 10:45</div>
+                                </div>
+                                <div class="content-block__title">Зал Аристотель</div>
+                                <p class="content-block__text">Интерьеры детских пространств — как создать комфортную среду для детей, воспитателей и родителей при помощи средств дизайна</p>
+                                <div class="content-block-tags">
+                                    <div class="content-block-tags__tag">#привет</div>
+                                    <div class="content-block-tags__tag">#дополнител бурказябра</div>
+                                </div>
+                                <div class="content-block-hidden hidden">
+                                    <div class="content-block-hidden-top">
+                                        <div class="content-block-hidden-top__img"><img src="assets/images/avatar-info.jpg" alt=""></div>
+                                        <div class="content-block-hidden-top__name">Романов Роман Романович</div>
+                                    </div>
+                                    <p class="content-block-hidden__text">Интерьеры детских пространств — как создать комфортную среду для детей, воспитателей и родителей при помощи средств дизайна</p>
+                                    <a href="#" class="content-block-hidden__btn">Страница спикера</a>
+                                </div>
+                            </div>
+                            <div class="content-block__speakers">Спикеры</div>
+                            <div class="content-block-avatar">
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <a href="#" class="content-block-avatar__more">+5</a>
+                            </div>
+                            <div class="content-block-link">
+                                <a href="#" class="content-block-link__share">Поделиться</a>
+                                <a href="#" class="content-block-link__like">Добавить в избранное</a>
+                            </div>
+                        </div>
+                        <div class="content-block__box">
+                            <div class="content-block-inner">
+                                <div class="content-block-date">
+                                    <div class="content-block-date__day">27.07.2020</div>
+                                    <div class="content-block-date__time">10:00 - 10:45</div>
+                                </div>
+                                <div class="content-block__title">Зал Аристотель</div>
+                                <p class="content-block__text">Интерьеры детских пространств — как создать комфортную среду для детей, воспитателей и родителей при помощи средств дизайна</p>
+                                <div class="content-block-tags">
+                                    <div class="content-block-tags__tag">#привет</div>
+                                    <div class="content-block-tags__tag">#дополнител бурказябра</div>
+                                </div>
+                                <div class="content-block-hidden hidden">
+                                    <div class="content-block-hidden-top">
+                                        <div class="content-block-hidden-top__img"><img src="assets/images/avatar-info.jpg" alt=""></div>
+                                        <div class="content-block-hidden-top__name">Романов Роман Романович</div>
+                                    </div>
+                                    <p class="content-block-hidden__text">Интерьеры детских пространств — как создать комфортную среду для детей, воспитателей и родителей при помощи средств дизайна</p>
+                                    <a href="#" class="content-block-hidden__btn">Страница спикера</a>
+                                </div>
+                            </div>
+                            <div class="content-block__speakers">Спикеры</div>
+                            <div class="content-block-avatar">
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <a href="#" class="content-block-avatar__more">+5</a>
+                            </div>
+                            <div class="content-block-link">
+                                <a href="#" class="content-block-link__share">Поделиться</a>
+                                <a href="#" class="content-block-link__like">Добавить в избранное</a>
+                            </div>
+                        </div>
+                        <div class="content-block__box">
+                            <div class="content-block-inner">
+                                <div class="content-block-date">
+                                    <div class="content-block-date__day">27.07.2020</div>
+                                    <div class="content-block-date__time">10:00 - 10:45</div>
+                                </div>
+                                <div class="content-block__title">Зал Аристотель</div>
+                                <p class="content-block__text">Интерьеры детских пространств — как создать комфортную среду для детей, воспитателей и родителей при помощи средств дизайна</p>
+                                <div class="content-block-tags">
+                                    <div class="content-block-tags__tag">#привет</div>
+                                    <div class="content-block-tags__tag">#дополнител бурказябра</div>
+                                </div>
+                                <div class="content-block-hidden hidden">
+                                    <div class="content-block-hidden-top">
+                                        <div class="content-block-hidden-top__img"><img src="assets/images/avatar-info.jpg" alt=""></div>
+                                        <div class="content-block-hidden-top__name">Романов Роман Романович</div>
+                                    </div>
+                                    <p class="content-block-hidden__text">Интерьеры детских пространств — как создать комфортную среду для детей, воспитателей и родителей при помощи средств дизайна</p>
+                                    <a href="#" class="content-block-hidden__btn">Страница спикера</a>
+                                </div>
+                            </div>
+                            <div class="content-block__speakers">Спикеры</div>
+                            <div class="content-block-avatar">
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <a href="#" class="content-block-avatar__more">+5</a>
+                            </div>
+                            <div class="content-block-link">
+                                <a href="#" class="content-block-link__share">Поделиться</a>
+                                <a href="#" class="content-block-link__like">Добавить в избранное</a>
+                            </div>
+                        </div>
+                        <div class="content-block__box">
+                            <div class="content-block-inner">
+                                <div class="content-block-date">
+                                    <div class="content-block-date__day">27.07.2020</div>
+                                    <div class="content-block-date__time">10:00 - 10:45</div>
+                                </div>
+                                <div class="content-block__title">Зал Аристотель</div>
+                                <p class="content-block__text">Интерьеры детских пространств — как создать комфортную среду для детей, воспитателей и родителей при помощи средств дизайна</p>
+                                <div class="content-block-tags">
+                                    <div class="content-block-tags__tag">#привет</div>
+                                    <div class="content-block-tags__tag">#дополнител бурказябра</div>
+                                </div>
+                                <div class="content-block-hidden hidden">
+                                    <div class="content-block-hidden-top">
+                                        <div class="content-block-hidden-top__img"><img src="assets/images/avatar-info.jpg" alt=""></div>
+                                        <div class="content-block-hidden-top__name">Романов Роман Романович</div>
+                                    </div>
+                                    <p class="content-block-hidden__text">Интерьеры детских пространств — как создать комфортную среду для детей, воспитателей и родителей при помощи средств дизайна</p>
+                                    <a href="#" class="content-block-hidden__btn">Страница спикера</a>
+                                </div>
+                            </div>
+                            <div class="content-block__speakers">Спикеры</div>
+                            <div class="content-block-avatar">
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <div class="content-block-avatar__img"><img src="assets/images/avatar.jpg" alt=""></div>
+                                <a href="#" class="content-block-avatar__more">+5</a>
+                            </div>
+                            <div class="content-block-link">
+                                <a href="#" class="content-block-link__share">Поделиться</a>
+                                <a href="#" class="content-block-link__like">Добавить в избранное</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <a href="#" class="footer__logo"><img src="assets/images/logo.svg" alt=""></a>
+                <div class="footer-contacts">
+                    <p class="footer-contacts__text">Телефон горячей линии</p>
+                    <a href="tel:+79653852821" class="footer-contacts__phone">+7 (965) 385 - 2821</a>
+                    <a href="mailto:info@mmco-expo.ru" class="footer-contacts__mail">info@mmco-expo.ru</a>
+                </div>
+                <div class="footer-info">
+                    <p class="footer-info__text">Мероприятие проходит на</p>
+                    <a href="#" class="footer-info__link">платформа ММСО</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.min.js"></script>
+</body>
+
+</html>
