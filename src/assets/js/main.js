@@ -449,16 +449,49 @@ window.addEventListener('load', function() {
     // new.js **********************
 
 
-    let $menuBurger = document.querySelector('.menu__burger');
-    let swiperNewPage;
+    let $menuBurger = document.querySelector('.menu__burger'), 
+        $buisnessFormDayLabel = document.querySelectorAll('.buisness__form-day-label'),
+        $buisnessFormSearchIcon = document.querySelector('.buisness__form-search-icon'), 
+        $buisnessForm = document.querySelector('.buisness__form'), 
+        $buisnessFormSwitchText = document.querySelectorAll('.buisness__form-switch-text'), 
+        $buisnessFormSwitchListLabel = document.querySelectorAll('.buisness__form-switch-list-label'), 
+        $buisnessMore = document.querySelector('.buisness__more'), 
+        $buisnessFormDayMobailDef = document.querySelector('.buisness__form-day-mobail-def'),
+        $buisnessFormDayMobailLabel = document.querySelectorAll('.buisness__form-day-mobail-label'), 
+        $buisnessFormCardModerAvatar = document.querySelectorAll('.buisness__form-card-moder-avatar'),
+        $buisnessFormCardSpeakerAvatar = document.querySelectorAll('.buisness__form-card-speaker-avatar');
 
+    let swiperNewPage,
+        swiperNewPageParty;
+
+    let textMore;
+
+    if(screen.width < 501 && document.querySelector('.party') !== null){
+        document.querySelector('.party__block').classList.add('swiper-container');
+        document.querySelector('.party__inner').classList.add('swiper-wrapper');
+        document.querySelectorAll('.party__box').forEach(function(item, index){
+            if(index === 0 || index % 6 === 0) {
+                document.querySelector('.party__inner').insertAdjacentHTML('beforeend', `
+                    <div class="party__slide"></div>
+                `);
+            }
+            document.querySelectorAll('.party__slide')[document.querySelectorAll('.party__slide').length - 1].insertAdjacentElement('beforeend', item);
+            document.querySelectorAll('.party__slide')[document.querySelectorAll('.party__slide').length - 1].classList.add('swiper-slide');
+        });
+        swiperNewPageParty = new Swiper('.party .swiper-container', {
+            spaceBetween: 16,
+            // slidesPerColumn: 3,
+            slidesPerView: 1,
+            autoHeight: true,
+            navigation: {
+                nextEl: '.party__button-next',
+                prevEl: '.party__button-prev',
+            }
+        });
+
+    }
     if(document.querySelector('.new-partners') !== null) {
-        swiperNewPage = new Swiper('.swiper-container', {
-            // loop: true,
-           
-             
-            // width: 880,
-            // slidesOffsetBefore: 20,
+        swiperNewPage = new Swiper('.new-partners .swiper-container', {
             spaceBetween: 20,
             slidesPerColumn: 5,
             slidesPerView: 1,
@@ -473,15 +506,113 @@ window.addEventListener('load', function() {
                     spaceBetween: 45,
                 }
             }
-        })} 
-    
+        })
+    } 
+
+    function ajaxRequestNew(ajaxForm, url) {
+        event.preventDefault();
+        $.ajax({
+            url: url,
+            type: "POST",
+            dataType: "html",
+            data: $("#" + ajaxForm).serialize(), // Сеарилизуем объект
+            success: function(response) { //Данные отправлены успешно
+                let result = $.parseJSON(response);
+                console.log(result);
+            },
+            error: function(response) { // Данные не отправлены
+                alert('Ошибка. Данные не отправлены.');
+            }
+        });
+    }
     function clickBurgerMenu(){
         this.closest('.menu').classList.toggle(`${this.closest('.menu').classList[0]}--open`);
     }
-
+    function clickFilterSwitchTag(modifier){
+        if(this.parentNode.querySelector(`.${modifier}`) !== null ) this.parentNode.querySelector(`.${modifier}`).classList.remove(modifier);
+        this.classList.add(modifier);
+    }
+    function clickFilterSwitchElement(){
+        this.closest('.buisness__form-switch').classList.toggle('buisness__form-switch--active');
+        console.log($(this).parent('.buisness__form-switch').children('.buisness__form-switch-list'));
+        $(this).parent('.buisness__form-switch').children('.buisness__form-switch-list').slideToggle(400);
+    }
+    function clickFilterTag(){
+        this.closest('.buisness__form-switch').querySelector('.buisness__form-switch-text').innerHTML = this.textContent;
+        clickFilterSwitchElement.bind(this.closest('.buisness__form-switch').querySelector('.buisness__form-switch-text'))();       
+    }
+    function clickFilterMore(){
+        $('.buisness__form-cards-hidden').slideToggle(400);
+        if(this.innerHTML !== 'Скрыть'){
+            textMore = this.innerHTML;
+            this.innerHTML = 'Скрыть';
+        }
+        else this.innerHTML = textMore;
+    }
+    function clickFilterDay(){
+        this.classList.toggle('buisness__form-day-mobail-def--open');
+        $('.buisness__form-day-mobail-list').slideToggle(400);
+    }
+    function clickBuisnessFormDayMobail(){
+        $buisnessFormDayMobailDef.innerHTML = this.textContent;
+        clickFilterDay.bind($buisnessFormDayMobailDef)();
+    }
+    function focusModalAvatar(){
+        let _this = this;
+        // if(this.closest('.buisness__form-card').querySelector('.buisness__form-card-modal--active') === null){
+        _this.closest('.buisness__form-card').querySelector('.buisness__form-card-modal-avatar-img').setAttribute('src', _this.querySelector('.buisness__form-card-img').src);
+        _this.closest('.buisness__form-card').querySelector('.buisness__form-card-modal-name').innerHTML = _this.dataset.avatarName;
+        _this.closest('.buisness__form-card').querySelector('.buisness__form-card-modal-text').innerHTML = _this.dataset.avatarInfo;
+        _this.closest('.buisness__form-card').querySelector('.buisness__form-card-modal').classList.toggle('buisness__form-card-modal--active');
+        _this.querySelector('.buisness__form-card-img').classList.toggle('buisness__form-card-img--hidden');
+        // }else{
+        //     setTimeout(function(){
+        //         _this.closest('.buisness__form-card').querySelector('.buisness__form-card-modal-avatar-img').setAttribute('src', _this.querySelector('.buisness__form-card-img').src);
+        //         _this.closest('.buisness__form-card').querySelector('.buisness__form-card-modal-name').innerHTML = _this.dataset.avatarName;
+        //         _this.closest('.buisness__form-card').querySelector('.buisness__form-card-modal-text').innerHTML = _this.dataset.avatarInfo;
+        //         _this.closest('.buisness__form-card').querySelector('.buisness__form-card-modal').classList.toggle('buisness__form-card-modal--active');
+        //     }, 300);
+        // }
+    }
+    function blurModalAvatar(){
+        this.closest('.buisness__form-card').querySelector('.buisness__form-card-modal--active').classList.remove('buisness__form-card-modal--active');
+        this.querySelector('.buisness__form-card-img').classList.toggle('buisness__form-card-img--hidden');
+    }
 
     if($menuBurger !== null) $menuBurger.addEventListener('click', clickBurgerMenu, false);
-
-
+    if($buisnessFormDayLabel.length !== 0) $buisnessFormDayLabel.forEach(function(item){
+        item.addEventListener('click', clickFilterSwitchTag.bind(item, 'buisness__form-day-label--active'), false);
+    });
+    if($buisnessFormSearchIcon !== null ) $buisnessFormSearchIcon.addEventListener('click',ajaxRequestNew.bind(null, 'business-filter', 'test.php'), false); // При нажатии на лупу
+    if($buisnessForm !== null) $buisnessForm.addEventListener('change',ajaxRequestNew.bind(null, 'business-filter', 'test.php'), false); // Любые изменения form
+    if($buisnessFormSwitchText.length !== 0) $buisnessFormSwitchText.forEach(function(item){
+        item.addEventListener('click', clickFilterSwitchElement, false);
+    });
+    if($buisnessFormSwitchListLabel.length !== 0) $buisnessFormSwitchListLabel.forEach(function(item){
+        item.addEventListener('click', clickFilterSwitchTag.bind(item, 'buisness__form-switch-list-label--active'), false);
+        item.addEventListener('click', clickFilterTag, false);
+    });
+    if($buisnessMore !== null) $buisnessMore.addEventListener('click', clickFilterMore, false);
+    if($buisnessFormDayMobailDef !== null) $buisnessFormDayMobailDef.addEventListener('click', clickFilterDay, false);
+    if($buisnessFormDayMobailLabel.length !== 0) $buisnessFormDayMobailLabel.forEach(function(item){
+        item.addEventListener('click', clickBuisnessFormDayMobail, false);
+    });
+    if($buisnessFormCardModerAvatar.length !== 0) $buisnessFormCardModerAvatar.forEach(function(item){
+        item.addEventListener('focus', focusModalAvatar, false);
+        item.addEventListener('blur', blurModalAvatar, false);
+    });
+    if($buisnessFormCardSpeakerAvatar.length !== 0) $buisnessFormCardSpeakerAvatar.forEach(function(item){
+        item.addEventListener('focus', focusModalAvatar, false);
+        item.addEventListener('blur', blurModalAvatar, false);
+    });
+    $('a[href^="#"]').on('click', function(event) {
+        if (String(this).slice(-1) !== '#') {
+            event.preventDefault();
+            document.querySelector('.menu').classList.toggle('menu--open');
+            let sc = $(this).attr("href"),
+                dn = $(sc).offset().top;
+            $('html, body').animate({ scrollTop: dn - 155}, 1000);
+        }
+    });
     // /new.js **************************
 });

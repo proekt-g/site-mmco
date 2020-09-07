@@ -30,11 +30,11 @@
                         <span class="menu__burger-line"></span>
                     </aside>
                     <div class="menu__desktop">
-                        <a class="menu__desktop-element" href="#">Концепция</a>
-                        <a class="menu__desktop-element" href="#">Партнёры</a>
-                        <a class="menu__desktop-element" href="#">Организаторы</a>
-                        <a class="menu__desktop-element" href="#">Деловая программа</a>
-                        <a class="menu__desktop-element" href="#">Выставка  решений</a>
+                        <a class="menu__desktop-element" href="#conc">Концепция</a>
+                        <a class="menu__desktop-element" href="#part">Партнёры</a>
+                        <a class="menu__desktop-element" href="#org">Организаторы</a>
+                        <a class="menu__desktop-element" href="#prgr">Деловая программа</a>
+                        <a class="menu__desktop-element" href="#resh">Выставка  решений</a>
                     </div>
                 </nav>
             </div>
@@ -60,7 +60,7 @@
                 </div>
                 <div class="info__inner">
                     <div class="info__lorem">
-                        <div class="new-title">Концепция</div>
+                        <div class="new-title" id="conc"><span class="new-title__letter">К</span>онцепция</div>
                         <div class="info__lorem-text">
                             Августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования для власти, бизнеса и профессионального сообщества. В рамках «Августовского педсовета онлайн» будет подведен итог анализа работы региона в первом этапе пандемии и будут обсуждены вопросы подготовки системы образования к новому учебному году
                         </div>
@@ -80,7 +80,7 @@
         </section>
         <section class="new-partners">
             <div class="wrapper">
-                <div class="new-title">Партнёры</div>
+                <div class="new-title" id="part"><span class="new-title__letter">П</span>артнёры</div>
                 <div class="new-partners__inner">
                     <div class="new-partners__slider swiper-container">
                         <div class="swiper-wrapper">
@@ -127,7 +127,7 @@
         <section class="new-organizers">
             <div class="wrapper">
                 <div class="new-organizers__inner">
-                    <div class="new-title">Организаторы</div>
+                    <div class="new-organizers__title new-title" id="org"><span class="new-title__letter">О</span>рганизаторы</div>
                     <div class="new-organizers__organizer">
                         <img class="new-organizers__organizer-img" src="assets/images/new/Group.png" alt="" >
                     </div>
@@ -137,8 +137,749 @@
                 </div>
             </div>
         </section>
+        <section class="buisness">
+            <div class="buisness-bg">
+                <img  class="buisness-bg__img" src="assets/images/new/bg-business.png" alt="">
+            </div>
+            <div class="wrapper">
+                <div class="buisness__title new-main-title">
+                    <div class="buisness__title-text new-main-title__text" id="prgr"><span class="new-main-title__letter">Д</span>еловая программа</div>
+                </div>
+                <form class="buisness__form" action="" method="post" id="business-filter">
+                    <div class="buisness__form-day">
+                        <input class="buisness__form-day-input" id="bs-i-1" type="radio" name="day" value="1" checked>
+                        <label class="buisness__form-day-label  buisness__form-day-label--active" for="bs-i-1">ВСЕ ДАТЫ</label>
+                        <input class="buisness__form-day-input" id="bs-i-2" type="radio" name="day" value="2">
+                        <label class="buisness__form-day-label" for="bs-i-2">14 сентября</label>
+                        <input class="buisness__form-day-input" id="bs-i-3" type="radio" name="day" value="3" >
+                        <label class="buisness__form-day-label" for="bs-i-3">15 сентября</label>
+                        <input class="buisness__form-day-input" id="bs-i-4" type="radio" name="day" value="4">
+                        <label class="buisness__form-day-label" for="bs-i-4">16 сентября</label>
+                        <input class="buisness__form-day-input" id="bs-i-5" type="radio" name="day" value="5">
+                        <label class="buisness__form-day-label" for="bs-i-5">17 сентября</label>
+                        <input class="buisness__form-day-input" id="bs-i-6" type="radio" name="day" value="6">
+                        <label class="buisness__form-day-label" for="bs-i-6">18 сентября</label>
+                    </div>
+                    <div class="buisness__form-day-mobail">
+                        <div class="buisness__form-day-mobail-def">ВСЕ ДАТЫ</div>
+                        <div class="buisness__form-day-mobail-list">
+                            <label class="buisness__form-day-mobail-label" for="bs-i-1">ВСЕ ДАТЫ</label>
+                            <label class="buisness__form-day-mobail-label" for="bs-i-2">14 сентября</label>
+                            <label class="buisness__form-day-mobail-label" for="bs-i-3">15 сентября</label>
+                            <label class="buisness__form-day-mobail-label" for="bs-i-4">16 сентября</label>
+                            <label class="buisness__form-day-mobail-label" for="bs-i-5">17 сентября</label>
+                            <label class="buisness__form-day-mobail-label" for="bs-i-6">18 сентября</label>
+                        </div>
+                    </div>
+                    <div class="buisness__form-search">
+                        <input class="buisness__form-search-input" type="text"  name="bs-srch" placeholder="Введите ваш запрос для поиска...">
+                        <div class="buisness__form-search-icon">
+                            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M30.8108 28.9843L21.8055 19.9791C23.5136 17.8704 24.5417 15.1896 24.5417 12.2709C24.5417 5.50475 19.037 0 12.2708 0C5.50469 0 0 5.50475 0 12.2709C0 19.037 5.50476 24.5418 12.2709 24.5418C15.1896 24.5418 17.8704 23.5136 19.9791 21.8056L28.9844 30.8109C29.2367 31.063 29.6455 31.063 29.8978 30.8109L30.8109 29.8977C31.0631 29.6455 31.0631 29.2365 30.8108 28.9843ZM12.2709 21.9584C6.92888 21.9584 2.58336 17.6129 2.58336 12.2709C2.58336 6.92888 6.92888 2.58336 12.2709 2.58336C17.6129 2.58336 21.9584 6.92888 21.9584 12.2709C21.9584 17.6129 17.6129 21.9584 12.2709 21.9584Z" fill="#828282"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="buisness__form-inputs">
+                        <div class="buisness__form-switch">
+                            <div class="buisness__form-switch-text">ВСЕ ТЕГИ</div>
+                            <div class="buisness__form-switch-list">
+                                <div class="buisness__form-switch-list-inner">
+                                    <input class="buisness__form-switch-list-input" id="bs-s1" type="radio" name="bs-tag" value="1">
+                                    <label class="buisness__form-switch-list-label" for="bs-s1">нацпроект «Образование»</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s2" type="radio" name="bs-tag" value="2">
+                                    <label class="buisness__form-switch-list-label" for="bs-s2">языковая политика</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s3" type="radio" name="bs-tag" value="3">
+                                    <label class="buisness__form-switch-list-label" for="bs-s3">родной язык</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s4" type="radio" name="bs-tag" value="4">
+                                    <label class="buisness__form-switch-list-label" for="bs-s4">наука</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s5" type="radio" name="bs-tag" value="5">
+                                    <label class="buisness__form-switch-list-label" for="bs-s5">психология</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s6" type="radio" name="bs-tag" value="6">
+                                    <label class="buisness__form-switch-list-label" for="bs-s6">библиотечно- информационные центры</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s7" type="radio" name="bs-tag" value="7">
+                                    <label class="buisness__form-switch-list-label" for="bs-s7">сетевое взаимодействие</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s8" type="radio" name="bs-tag" value="8">
+                                    <label class="buisness__form-switch-list-label" for="bs-s8">дополнительно образование</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s9" type="radio" name="bs-tag" value="9">
+                                    <label class="buisness__form-switch-list-label" for="bs-s9">внеурочная деятельность</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s10" type="radio" name="bs-tag" value="10">
+                                    <label class="buisness__form-switch-list-label" for="bs-s10">индивидуализация обучения</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s11" type="radio" name="bs-tag" value="11">
+                                    <label class="buisness__form-switch-list-label" for="bs-s11">здоровье</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s12" type="radio" name="bs-tag" value="12">
+                                    <label class="buisness__form-switch-list-label" for="bs-s12">технология</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s13" type="radio" name="bs-tag" value="13">
+                                    <label class="buisness__form-switch-list-label" for="bs-s13">логопедия и дефектология</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s14" type="radio" name="bs-tag" value="14">
+                                    <label class="buisness__form-switch-list-label" for="bs-s14">личностный потенциал</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s15" type="radio" name="bs-tag" value="15">
+                                    <label class="buisness__form-switch-list-label" for="bs-s15">родителям</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s16" type="radio" name="bs-tag" value="16">
+                                    <label class="buisness__form-switch-list-label" for="bs-s16">педагогическое образование</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s17" type="radio" name="bs-tag" value="17">
+                                    <label class="buisness__form-switch-list-label" for="bs-s17">классное руководство</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s18" type="radio" name="bs-tag" value="18">
+                                    <label class="buisness__form-switch-list-label" for="bs-s18">профессиональное образование</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s19" type="radio" name="bs-tag" value="19">
+                                    <label class="buisness__form-switch-list-label" for="bs-s19">социальная педагогика</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buisness__form-switch">
+                            <div class="buisness__form-switch-text">ВСЕ ЗАЛЫ</div>
+                            <div class="buisness__form-switch-list">
+                                <div class="buisness__form-switch-list-inner">
+                                    <input class="buisness__form-switch-list-input" id="bs-s111" type="radio" name="bs-tag" value="1">
+                                    <label class="buisness__form-switch-list-label" for="bs-s111">Будкевич</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s21" type="radio" name="bs-tag" value="2">
+                                    <label class="buisness__form-switch-list-label" for="bs-s21">Топоров</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s31" type="radio" name="bs-tag" value="3">
+                                    <label class="buisness__form-switch-list-label" for="bs-s31">Шалаев</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s41" type="radio" name="bs-tag" value="4">
+                                    <label class="buisness__form-switch-list-label" for="bs-s41">Штильке</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buisness__form-cards">
+                        <div class="buisness__form-cards-visible">
+                            <div class="buisness__form-card">
+                                <div class="buisness__form-card-date">
+                                    <div class="buisness__form-card-day">14.09</div>
+                                    <div class="buisness__form-card-time">10:00 - 11:00</div>
+                                </div>
+                                <div class="buisness__form-card-inner">
+                                    <div class="buisness__form-card-modal">
+                                        <div class="buisness__form-card-modal-inner">
+                                            <div class="buisness__form-card-modal-avatar"><img  class="buisness__form-card-modal-avatar-img" src="#" alt=""></div>
+                                            <div class="buisness__form-card-modal-name"></div>
+                                        </div>
+                                        <div class="buisness__form-card-modal-text"></div>
+                                    </div>
+                                    <div class="buisness__form-card-crumbs">
+                                        <div class="buisness__form-card-crumb">Панельная дискуссия</div>
+                                        <div class="buisness__form-card-crumb">Малый зал</div>
+                                    </div>
+                                    <div class="buisness__form-card-title">
+                                        <p class="buisness__form-card-title-p">
+                                            Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в трудной жизненной ситуации
+                                        </p>
+                                    </div>
+                                    <div class="buisness__form-card-tag">художественно-эстетическое и трудовое образование</div>
+                                    <div class="buisness__form-card-tag">ВОСПИТАНИЕ</div>
+                                    <div class="buisness__form-card-tag">управление качеством образования</div>
+                                </div>
+                                <div class="buisness__form-card-bottom">
+                                    <div class="buisness__form-card-moder">
+                                        <div class="buisness__form-card-moder-title">МОДЕРАТОРЫ</div>
+                                        <div class="buisness__form-card-moder-inner">
+                                            <div class="buisness__form-card-moder-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Мирослава Константинопольская" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-moder-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников Ставропольская краевая организация Профсоюза работников" data-avatar-name="Test Test" data-avatar-img="assets/assets/images/new/Rectangle_29-white.jpg" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buisness__form-card-speaker">
+                                        <div class="buisness__form-card-speaker-title">СПИКЕРЫ</div>
+                                        <div class="buisness__form-card-speaker-inner">
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главн по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="SSSSSS Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buisness__form-card">
+                                <div class="buisness__form-card-date">
+                                    <div class="buisness__form-card-day">14.09</div>
+                                    <div class="buisness__form-card-time">10:00 - 11:00</div>
+                                </div>
+                                <div class="buisness__form-card-inner">
+                                    <div class="buisness__form-card-modal">
+                                        <div class="buisness__form-card-modal-inner">
+                                            <div class="buisness__form-card-modal-avatar"><img  class="buisness__form-card-modal-avatar-img" src="#" alt=""></div>
+                                            <div class="buisness__form-card-modal-name"></div>
+                                        </div>
+                                        <div class="buisness__form-card-modal-text"></div>
+                                    </div>
+                                    <div class="buisness__form-card-crumbs">
+                                        <div class="buisness__form-card-crumb">Панельная дискуссия</div>
+                                        <div class="buisness__form-card-crumb">Малый зал</div>
+                                    </div>
+                                    <div class="buisness__form-card-title">
+                                        <p class="buisness__form-card-title-p">
+                                            Распространение эффективных воспитательных практик, новых технологий и методов работы 
+                                        </p>
+                                    </div>
+                                    <div class="buisness__form-card-tag">художественно-эстетическое и трудовое образование</div>
+                                    <div class="buisness__form-card-tag">ВОСПИТАНИЕ</div>
+                                    <div class="buisness__form-card-tag">управление качеством образования</div>
+                                </div>
+                                <div class="buisness__form-card-bottom">
+                                    <div class="buisness__form-card-moder">
+                                        <div class="buisness__form-card-moder-title">МОДЕРАТОРЫ</div>
+                                        <div class="buisness__form-card-moder-inner">
+                                            <div class="buisness__form-card-moder-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Мирослава Константинопольская" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buisness__form-card-speaker">
+                                        <div class="buisness__form-card-speaker-title">СПИКЕРЫ</div>
+                                        <div class="buisness__form-card-speaker-inner">
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buisness__form-card">
+                                <div class="buisness__form-card-date">
+                                    <div class="buisness__form-card-day">14.09</div>
+                                    <div class="buisness__form-card-time">10:00 - 11:00</div>
+                                </div>
+                                <div class="buisness__form-card-inner">
+                                    <div class="buisness__form-card-modal">
+                                        <div class="buisness__form-card-modal-inner">
+                                            <div class="buisness__form-card-modal-avatar"><img  class="buisness__form-card-modal-avatar-img" src="#" alt=""></div>
+                                            <div class="buisness__form-card-modal-name"></div>
+                                        </div>
+                                        <div class="buisness__form-card-modal-text"></div>
+                                    </div>
+                                    <div class="buisness__form-card-crumbs">
+                                        <div class="buisness__form-card-crumb">Панельная дискуссия</div>
+                                        <div class="buisness__form-card-crumb">Малый зал</div>
+                                    </div>
+                                    <div class="buisness__form-card-title">
+                                        <p class="buisness__form-card-title-p">
+                                            Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в трудной жизненной ситуации
+                                        </p>
+                                    </div>
+                                    <div class="buisness__form-card-tag">художественно-эстетическое и трудовое образование</div>
+                                    <div class="buisness__form-card-tag">ВОСПИТАНИЕ</div>
+                                    <div class="buisness__form-card-tag">управление качеством образования</div>
+                                </div>
+                                <div class="buisness__form-card-bottom">
+                                    <div class="buisness__form-card-moder">
+                                        <div class="buisness__form-card-moder-title">МОДЕРАТОРЫ</div>
+                                        <div class="buisness__form-card-moder-inner">
+                                            <div class="buisness__form-card-moder-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Мирослава Константинопольская" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-moder-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Мирослава Константинопольская" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buisness__form-card-speaker">
+                                        <div class="buisness__form-card-speaker-title">СПИКЕРЫ</div>
+                                        <div class="buisness__form-card-speaker-inner">
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buisness__form-card">
+                                <div class="buisness__form-card-date">
+                                    <div class="buisness__form-card-day">14.09</div>
+                                    <div class="buisness__form-card-time">10:00 - 11:00</div>
+                                </div>
+                                <div class="buisness__form-card-inner">
+                                    <div class="buisness__form-card-modal">
+                                        <div class="buisness__form-card-modal-inner">
+                                            <div class="buisness__form-card-modal-avatar"><img  class="buisness__form-card-modal-avatar-img" src="#" alt=""></div>
+                                            <div class="buisness__form-card-modal-name"></div>
+                                        </div>
+                                        <div class="buisness__form-card-modal-text"></div>
+                                    </div>
+                                    <div class="buisness__form-card-crumbs">
+                                        <div class="buisness__form-card-crumb">Панельная дискуссия</div>
+                                        <div class="buisness__form-card-crumb">Малый зал</div>
+                                    </div>
+                                    <div class="buisness__form-card-title">
+                                        <p class="buisness__form-card-title-p">
+                                            Распространение эффективных воспитательных практик, новых технологий и методов работы 
+                                        </p>
+                                    </div>
+                                    <div class="buisness__form-card-tag">художественно-эстетическое и трудовое образование</div>
+                                    <div class="buisness__form-card-tag">ВОСПИТАНИЕ</div>
+                                    <div class="buisness__form-card-tag">управление качеством образования</div>
+                                </div>
+                                <div class="buisness__form-card-bottom">
+                                    <div class="buisness__form-card-moder">
+                                        <div class="buisness__form-card-moder-title">МОДЕРАТОРЫ</div>
+                                        <div class="buisness__form-card-moder-inner">
+                                            <div class="buisness__form-card-moder-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Мирослава Константинопольская" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buisness__form-card-speaker">
+                                        <div class="buisness__form-card-speaker-title">СПИКЕРЫ</div>
+                                        <div class="buisness__form-card-speaker-inner">
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buisness__form-card">
+                                <div class="buisness__form-card-date">
+                                    <div class="buisness__form-card-day">14.09</div>
+                                    <div class="buisness__form-card-time">10:00 - 11:00</div>
+                                </div>
+                                <div class="buisness__form-card-inner">
+                                    <div class="buisness__form-card-modal">
+                                        <div class="buisness__form-card-modal-inner">
+                                            <div class="buisness__form-card-modal-avatar"><img  class="buisness__form-card-modal-avatar-img" src="#" alt=""></div>
+                                            <div class="buisness__form-card-modal-name"></div>
+                                        </div>
+                                        <div class="buisness__form-card-modal-text"></div>
+                                    </div>
+                                    <div class="buisness__form-card-crumbs">
+                                        <div class="buisness__form-card-crumb">Панельная дискуссия</div>
+                                        <div class="buisness__form-card-crumb">Малый зал</div>
+                                    </div>
+                                    <div class="buisness__form-card-title">
+                                        <p class="buisness__form-card-title-p">
+                                            Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в трудной жизненной ситуации
+                                        </p>
+                                    </div>
+                                    <div class="buisness__form-card-tag">художественно-эстетическое и трудовое образование</div>
+                                    <div class="buisness__form-card-tag">ВОСПИТАНИЕ</div>
+                                    <div class="buisness__form-card-tag">управление качеством образования</div>
+                                </div>
+                                <div class="buisness__form-card-bottom">
+                                    <div class="buisness__form-card-moder">
+                                        <div class="buisness__form-card-moder-title">МОДЕРАТОРЫ</div>
+                                        <div class="buisness__form-card-moder-inner">
+                                            <div class="buisness__form-card-moder-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Мирослава Константинопольская" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-moder-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Мирослава Константинопольская" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buisness__form-card-speaker">
+                                        <div class="buisness__form-card-speaker-title">СПИКЕРЫ</div>
+                                        <div class="buisness__form-card-speaker-inner">
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buisness__form-card">
+                                <div class="buisness__form-card-date">
+                                    <div class="buisness__form-card-day">14.09</div>
+                                    <div class="buisness__form-card-time">10:00 - 11:00</div>
+                                </div>
+                                <div class="buisness__form-card-inner">
+                                    <div class="buisness__form-card-modal">
+                                        <div class="buisness__form-card-modal-inner">
+                                            <div class="buisness__form-card-modal-avatar"><img  class="buisness__form-card-modal-avatar-img" src="#" alt=""></div>
+                                            <div class="buisness__form-card-modal-name"></div>
+                                        </div>
+                                        <div class="buisness__form-card-modal-text"></div>
+                                    </div>
+                                    <div class="buisness__form-card-crumbs">
+                                        <div class="buisness__form-card-crumb">Панельная дискуссия</div>
+                                        <div class="buisness__form-card-crumb">Малый зал</div>
+                                    </div>
+                                    <div class="buisness__form-card-title">
+                                        <p class="buisness__form-card-title-p">
+                                            Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в трудной жизненной ситуации
+                                        </p>
+                                    </div>
+                                    <div class="buisness__form-card-tag">художественно-эстетическое и трудовое образование</div>
+                                    <div class="buisness__form-card-tag">ВОСПИТАНИЕ</div>
+                                    <div class="buisness__form-card-tag">управление качеством образования</div>
+                                </div>
+                                <div class="buisness__form-card-bottom">
+                                    <div class="buisness__form-card-moder">
+                                        <div class="buisness__form-card-moder-title">МОДЕРАТОРЫ</div>
+                                        <div class="buisness__form-card-moder-inner">
+                                            <div class="buisness__form-card-moder-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Мирослава Константинопольская" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-moder-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Мирослава Константинопольская" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="buisness__form-card-speaker">
+                                        <div class="buisness__form-card-speaker-title">СПИКЕРЫ</div>
+                                        <div class="buisness__form-card-speaker-inner">
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                            <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="buisness__form-cards-hidden">
+                            <div class="buisness__form-cards-inner">
+                                <div class="buisness__form-card">
+                                    <div class="buisness__form-card-date">
+                                        <div class="buisness__form-card-day">14.09</div>
+                                        <div class="buisness__form-card-time">10:00 - 11:00</div>
+                                    </div>
+                                    <div class="buisness__form-card-inner">
+                                        <div class="buisness__form-card-modal">
+                                            <div class="buisness__form-card-modal-inner">
+                                                <div class="buisness__form-card-modal-avatar"><img  class="buisness__form-card-modal-avatar-img" src="#" alt=""></div>
+                                                <div class="buisness__form-card-modal-name"></div>
+                                            </div>
+                                            <div class="buisness__form-card-modal-text"></div>
+                                        </div>
+                                        <div class="buisness__form-card-crumbs">
+                                            <div class="buisness__form-card-crumb">Панельная дискуссия</div>
+                                            <div class="buisness__form-card-crumb">Малый зал</div>
+                                        </div>
+                                        <div class="buisness__form-card-title">
+                                            <p class="buisness__form-card-title-p">
+                                                Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в трудной жизненной ситуации
+                                            </p>
+                                        </div>
+                                        <div class="buisness__form-card-tag">художественно-эстетическое и трудовое образование</div>
+                                        <div class="buisness__form-card-tag">ВОСПИТАНИЕ</div>
+                                        <div class="buisness__form-card-tag">управление качеством образования</div>
+                                    </div>
+                                    <div class="buisness__form-card-bottom">
+                                        <div class="buisness__form-card-moder">
+                                            <div class="buisness__form-card-moder-title">МОДЕРАТОРЫ</div>
+                                            <div class="buisness__form-card-moder-inner">
+                                                <div class="buisness__form-card-moder-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Мирослава Константинопольская" tabindex=0>
+                                                    <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                                </div>
+                                                <div class="buisness__form-card-moder-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Мирослава Константинопольская" tabindex=0>
+                                                    <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="buisness__form-card-speaker">
+                                            <div class="buisness__form-card-speaker-title">СПИКЕРЫ</div>
+                                            <div class="buisness__form-card-speaker-inner">
+                                                <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                    <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                                </div>
+                                                <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                    <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                                </div>
+                                                <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                    <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                                </div>
+                                                <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                    <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                                </div>
+                                                <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                    <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                                </div>
+                                                <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                    <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                                </div>
+                                                <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                    <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                                </div>
+                                                <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                    <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                                </div>
+                                                <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                    <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                                </div>
+                                                <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                    <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                                </div>
+                                                <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                    <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="buisness__form-card">
+                                    <div class="buisness__form-card-date">
+                                        <div class="buisness__form-card-day">14.09</div>
+                                        <div class="buisness__form-card-time">10:00 - 11:00</div>
+                                    </div>
+                                    <div class="buisness__form-card-inner">
+                                        <div class="buisness__form-card-modal">
+                                            <div class="buisness__form-card-modal-inner">
+                                                <div class="buisness__form-card-modal-avatar"><img  class="buisness__form-card-modal-avatar-img" src="#" alt=""></div>
+                                                <div class="buisness__form-card-modal-name"></div>
+                                            </div>
+                                            <div class="buisness__form-card-modal-text"></div>
+                                        </div>
+                                        <div class="buisness__form-card-crumbs">
+                                            <div class="buisness__form-card-crumb">Панельная дискуссия</div>
+                                            <div class="buisness__form-card-crumb">Малый зал</div>
+                                        </div>
+                                        <div class="buisness__form-card-title">
+                                            <p class="buisness__form-card-title-p">
+                                                Распространение эффективных воспитательных практик, новых технологий и методов работы 
+                                            </p>
+                                        </div>
+                                        <div class="buisness__form-card-tag">художественно-эстетическое и трудовое образование</div>
+                                        <div class="buisness__form-card-tag">ВОСПИТАНИЕ</div>
+                                        <div class="buisness__form-card-tag">управление качеством образования</div>
+                                    </div>
+                                    <div class="buisness__form-card-bottom">
+                                        <div class="buisness__form-card-moder">
+                                            <div class="buisness__form-card-moder-title">МОДЕРАТОРЫ</div>
+                                            <div class="buisness__form-card-moder-inner">
+                                                <div class="buisness__form-card-moder-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Мирослава Константинопольская" tabindex=0>
+                                                    <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="buisness__form-card-speaker">
+                                            <div class="buisness__form-card-speaker-title">СПИКЕРЫ</div>
+                                            <div class="buisness__form-card-speaker-inner">
+                                                <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                    <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                                </div>
+                                                <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                    <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                                </div>
+                                                <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                    <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                                </div>
+                                                <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                    <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                                </div>
+                                                <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                    <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                                </div>
+                                                <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                    <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                                </div>
+                                                <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                    <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                                </div>
+                                                <div class="buisness__form-card-speaker-avatar" data-avatar-info="главный специалист по информационной работе, Ставропольская краевая организация Профсоюза работников, Ставропольская краевая организация Профсоюза работников" data-avatar-name="Speaker Test" tabindex=0>
+                                                    <img class="buisness__form-card-img" src="assets/images/new/avatar.jpg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="buisness__more">Показать ещё 10</div>
+                <div class="buisness__title new-main-title">
+                    <div class="buisness__title-text new-main-title__text" id="resh"><span class="new-main-title__letter">В</span>ыставка образовательных решений</div>
+                </div>
+                <div class="buisness__picture"><img class="buisness__picture-img" src="assets/images/new/Rectangle_354.jpg " alt="" ></div>
+                <div class="buisness__text">
+                    <div class="buisness__text-p">Августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования для власти, бизнеса и профессионального сообщества. В рамках «Августовского педсовета онлайн» будет подведен итог анализа работы региона в первом этапе пандемии и будут обсуждены вопросы подготовки системы образования к новому учебному году.</div>
+                    <div class="buisness__text-p">Августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования для власти, бизнеса и профессионального сообщества. В рамках «Августовского педсовета онлайн» будет подведен итог анализа работы региона в первом этапе пандемии и будут обсуждены вопросы подготовки системы образования к новому учебному году.</div>
+                </div>
+                <a class="buisness__btn new-btn new-btn--yellow new-btn--long" href="#">Посетить выставку</a>
+            </div>
+        </section>
+        <section class="party">
+            <div class="wrapper">
+                <div class="party__title new-title"><span class="new-title__letter">У</span>частники выставки</div>
+                <div class="party__block">
+                    <div class="party__inner">
+                        <div class="party__box"><img class="party__box-img" src="assets/images/new/party-1.jpg" alt="" ></div>
+                        <div class="party__box"><img class="party__box-img" src="assets/images/new/party-2.jpg" alt="" ></div>
+                        <div class="party__box"><img class="party__box-img" src="assets/images/new/party-3.png" alt="" ></div>
+                        <div class="party__box"><img class="party__box-img" src="assets/images/new/party-4.png" alt="" ></div>
+                        <div class="party__box"><img class="party__box-img" src="assets/images/new/party-5.jpg" alt="" ></div>
+                        <div class="party__box"><img class="party__box-img" src="assets/images/new/party-6.jpg" alt="" ></div>
+                        <div class="party__box"><img class="party__box-img" src="assets/images/new/party-1.jpg" alt="" ></div>
+                        <div class="party__box"><img class="party__box-img" src="assets/images/new/party-2.jpg" alt="" ></div>
+                        <div class="party__box"><img class="party__box-img" src="assets/images/new/party-3.png" alt="" ></div>
+                        <div class="party__box"><img class="party__box-img" src="assets/images/new/party-4.png" alt="" ></div>
+                    </div>
+                    <div class="party__button-prev">
+                        <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.24261 8.90523L10.5355 16.1981L9.12129 17.6123L0.414185 8.90523L9.12129 0.19812L10.5355 1.61233L3.24261 8.90523Z" fill="#1E2828"/>
+                        </svg>
+                    </div>
+                    <div class="party__button-next">
+                        <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75739 8.90523L0.464495 16.1981L1.87871 17.6123L10.5858 8.90523L1.87871 0.19812L0.464495 1.61233L7.75739 8.90523Z" fill="#1E2828"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="new-footer">
+        <div class="wrapper wrapper--long">
+            <a class="new-footer__logo" href="#">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="assets/images/new/logo-footer-mobail.svg">
+                    <img class="new-footer__logo-img" src="assets/images/new/logo-footer.svg" alt="" >
+                </picture>
+            </a>
+        </div>
+    </footer>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/js/main.min.js"></script>
 </body>
 </html>
