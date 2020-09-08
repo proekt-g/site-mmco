@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
+    />
     <link rel="stylesheet" href="assets/css/style.min.css">
     <title>Document</title>
 </head>
@@ -181,47 +185,47 @@
                     </div>
                     <div class="buisness__form-inputs">
                         <div class="buisness__form-switch">
-                            <div class="buisness__form-switch-text">ВСЕ ТЕГИ</div>
+                            <div class="buisness__form-switch-text" data-default-text="ВСЕ ТЕГИ" data-select-text="теги: выбрано ">ВСЕ ТЕГИ</div>
                             <div class="buisness__form-switch-list">
                                 <div class="buisness__form-switch-list-inner">
-                                    <input class="buisness__form-switch-list-input" id="bs-s1" type="radio" name="bs-tag" value="1">
-                                    <label class="buisness__form-switch-list-label" for="bs-s1">нацпроект «Образование»</label>
-                                    <input class="buisness__form-switch-list-input" id="bs-s2" type="radio" name="bs-tag" value="2">
-                                    <label class="buisness__form-switch-list-label" for="bs-s2">языковая политика</label>
-                                    <input class="buisness__form-switch-list-input" id="bs-s3" type="radio" name="bs-tag" value="3">
-                                    <label class="buisness__form-switch-list-label" for="bs-s3">родной язык</label>
-                                    <input class="buisness__form-switch-list-input" id="bs-s4" type="radio" name="bs-tag" value="4">
-                                    <label class="buisness__form-switch-list-label" for="bs-s4">наука</label>
-                                    <input class="buisness__form-switch-list-input" id="bs-s5" type="radio" name="bs-tag" value="5">
-                                    <label class="buisness__form-switch-list-label" for="bs-s5">психология</label>
-                                    <input class="buisness__form-switch-list-input" id="bs-s6" type="radio" name="bs-tag" value="6">
-                                    <label class="buisness__form-switch-list-label" for="bs-s6">библиотечно- информационные центры</label>
-                                    <input class="buisness__form-switch-list-input" id="bs-s7" type="radio" name="bs-tag" value="7">
-                                    <label class="buisness__form-switch-list-label" for="bs-s7">сетевое взаимодействие</label>
-                                    <input class="buisness__form-switch-list-input" id="bs-s8" type="radio" name="bs-tag" value="8">
-                                    <label class="buisness__form-switch-list-label" for="bs-s8">дополнительно образование</label>
-                                    <input class="buisness__form-switch-list-input" id="bs-s9" type="radio" name="bs-tag" value="9">
-                                    <label class="buisness__form-switch-list-label" for="bs-s9">внеурочная деятельность</label>
-                                    <input class="buisness__form-switch-list-input" id="bs-s10" type="radio" name="bs-tag" value="10">
-                                    <label class="buisness__form-switch-list-label" for="bs-s10">индивидуализация обучения</label>
-                                    <input class="buisness__form-switch-list-input" id="bs-s11" type="radio" name="bs-tag" value="11">
-                                    <label class="buisness__form-switch-list-label" for="bs-s11">здоровье</label>
-                                    <input class="buisness__form-switch-list-input" id="bs-s12" type="radio" name="bs-tag" value="12">
-                                    <label class="buisness__form-switch-list-label" for="bs-s12">технология</label>
-                                    <input class="buisness__form-switch-list-input" id="bs-s13" type="radio" name="bs-tag" value="13">
-                                    <label class="buisness__form-switch-list-label" for="bs-s13">логопедия и дефектология</label>
-                                    <input class="buisness__form-switch-list-input" id="bs-s14" type="radio" name="bs-tag" value="14">
-                                    <label class="buisness__form-switch-list-label" for="bs-s14">личностный потенциал</label>
-                                    <input class="buisness__form-switch-list-input" id="bs-s15" type="radio" name="bs-tag" value="15">
-                                    <label class="buisness__form-switch-list-label" for="bs-s15">родителям</label>
-                                    <input class="buisness__form-switch-list-input" id="bs-s16" type="radio" name="bs-tag" value="16">
-                                    <label class="buisness__form-switch-list-label" for="bs-s16">педагогическое образование</label>
-                                    <input class="buisness__form-switch-list-input" id="bs-s17" type="radio" name="bs-tag" value="17">
-                                    <label class="buisness__form-switch-list-label" for="bs-s17">классное руководство</label>
-                                    <input class="buisness__form-switch-list-input" id="bs-s18" type="radio" name="bs-tag" value="18">
-                                    <label class="buisness__form-switch-list-label" for="bs-s18">профессиональное образование</label>
-                                    <input class="buisness__form-switch-list-input" id="bs-s19" type="radio" name="bs-tag" value="19">
-                                    <label class="buisness__form-switch-list-label" for="bs-s19">социальная педагогика</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s1" type="checkbox" name="bs-tag" value="1">
+                                    <label class="buisness__form-switch-list-tag" for="bs-s1">нацпроект «Образование»</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s2" type="checkbox" name="bs-tag" value="2">
+                                    <label class="buisness__form-switch-list-tag" for="bs-s2">языковая политика</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s3" type="checkbox" name="bs-tag" value="3">
+                                    <label class="buisness__form-switch-list-tag" for="bs-s3">родной язык</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s4" type="checkbox" name="bs-tag" value="4">
+                                    <label class="buisness__form-switch-list-tag" for="bs-s4">наука</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s5" type="checkbox" name="bs-tag" value="5">
+                                    <label class="buisness__form-switch-list-tag" for="bs-s5">психология</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s6" type="checkbox" name="bs-tag" value="6">
+                                    <label class="buisness__form-switch-list-tag" for="bs-s6">библиотечно- информационные центры</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s7" type="checkbox" name="bs-tag" value="7">
+                                    <label class="buisness__form-switch-list-tag" for="bs-s7">сетевое взаимодействие</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s8" type="checkbox" name="bs-tag" value="8">
+                                    <label class="buisness__form-switch-list-tag" for="bs-s8">дополнительно образование</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s9" type="checkbox" name="bs-tag" value="9">
+                                    <label class="buisness__form-switch-list-tag" for="bs-s9">внеурочная деятельность</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s10" type="checkbox" name="bs-tag" value="10">
+                                    <label class="buisness__form-switch-list-tag" for="bs-s10">индивидуализация обучения</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s11" type="checkbox" name="bs-tag" value="11">
+                                    <label class="buisness__form-switch-list-tag" for="bs-s11">здоровье</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s12" type="checkbox" name="bs-tag" value="12">
+                                    <label class="buisness__form-switch-list-tag" for="bs-s12">технология</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s13" type="checkbox" name="bs-tag" value="13">
+                                    <label class="buisness__form-switch-list-tag" for="bs-s13">логопедия и дефектология</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s14" type="checkbox" name="bs-tag" value="14">
+                                    <label class="buisness__form-switch-list-tag" for="bs-s14">личностный потенциал</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s15" type="checkbox" name="bs-tag" value="15">
+                                    <label class="buisness__form-switch-list-tag" for="bs-s15">родителям</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s16" type="checkbox" name="bs-tag" value="16">
+                                    <label class="buisness__form-switch-list-tag" for="bs-s16">педагогическое образование</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s17" type="checkbox" name="bs-tag" value="17">
+                                    <label class="buisness__form-switch-list-tag" for="bs-s17">классное руководство</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s18" type="checkbox" name="bs-tag" value="18">
+                                    <label class="buisness__form-switch-list-tag" for="bs-s18">профессиональное образование</label>
+                                    <input class="buisness__form-switch-list-input" id="bs-s19" type="checkbox" name="bs-tag" value="19">
+                                    <label class="buisness__form-switch-list-tag" for="bs-s19">социальная педагогика</label>
                                 </div>
                             </div>
                         </div>
@@ -244,6 +248,16 @@
                     <div class="buisness__form-cards">
                         <div class="buisness__form-cards-visible">
                             <div class="buisness__form-card">
+                                <div class="buisness__form-card-note">
+                                    <div class="buisness__form-card-note-close">
+                                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2 17L17 1.99997" stroke="#56CCC3" stroke-width="3" stroke-linecap="round"/>
+                                            <path d="M17 17L2 1.99997" stroke="#56CCC3" stroke-width="3" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="buisness__form-card-note-title">Аннотация</div>
+                                    <div class="buisness__form-card-note-text" data-simplebar data-simplebar-auto-hide="false">Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования для власти, бизнеса и профессионального сообщества. В рамках «Августовского педсовета онлайн» будет подведен итог анализа работы региона в первом этапе пандемии и будут обсуждены вопросы подготовки системы образования к новому учебному году для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования подготовки системы Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования для власти, бизнеса и профессионального сообщества. В рамках «Августовского педсовета онлайн» будет подведен итог анализа работы региона в первом этапе пандемии и будут обсуждены вопросы подготовки системы образования к новому учебному году для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования подготовки системы</div>
+                                </div>
                                 <div class="buisness__form-card-date">
                                     <div class="buisness__form-card-day">14.09</div>
                                     <div class="buisness__form-card-time">10:00 - 11:00</div>
@@ -265,6 +279,7 @@
                                             Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в трудной жизненной ситуации
                                         </p>
                                     </div>
+                                    <div class="buisness__form-card-read">читать аннотацию</div>
                                     <div class="buisness__form-card-tag">художественно-эстетическое и трудовое образование</div>
                                     <div class="buisness__form-card-tag">ВОСПИТАНИЕ</div>
                                     <div class="buisness__form-card-tag">управление качеством образования</div>
@@ -322,6 +337,16 @@
                                 </div>
                             </div>
                             <div class="buisness__form-card">
+                                <div class="buisness__form-card-note">
+                                    <div class="buisness__form-card-note-close">
+                                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2 17L17 1.99997" stroke="#56CCC3" stroke-width="3" stroke-linecap="round"/>
+                                            <path d="M17 17L2 1.99997" stroke="#56CCC3" stroke-width="3" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="buisness__form-card-note-title">Аннотация</div>
+                                    <div class="buisness__form-card-note-text" data-simplebar data-simplebar-auto-hide="false">Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования для власти, бизнеса и профессионального сообщества. В рамках «Августовского педсовета онлайн» будет подведен итог анализа работы региона в первом этапе пандемии и будут обсуждены вопросы подготовки системы образования к новому учебному году для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования подготовки системы Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования для власти, бизнеса и профессионального сообщества. В рамках «Августовского педсовета онлайн» будет подведен итог анализа работы региона в первом этапе пандемии и будут обсуждены вопросы подготовки системы образования к новому учебному году для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования подготовки системы</div>
+                                </div>
                                 <div class="buisness__form-card-date">
                                     <div class="buisness__form-card-day">14.09</div>
                                     <div class="buisness__form-card-time">10:00 - 11:00</div>
@@ -343,6 +368,7 @@
                                             Распространение эффективных воспитательных практик, новых технологий и методов работы 
                                         </p>
                                     </div>
+                                    <div class="buisness__form-card-read">читать аннотацию</div>
                                     <div class="buisness__form-card-tag">художественно-эстетическое и трудовое образование</div>
                                     <div class="buisness__form-card-tag">ВОСПИТАНИЕ</div>
                                     <div class="buisness__form-card-tag">управление качеством образования</div>
@@ -388,6 +414,16 @@
                                 </div>
                             </div>
                             <div class="buisness__form-card">
+                                <div class="buisness__form-card-note">
+                                    <div class="buisness__form-card-note-close">
+                                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2 17L17 1.99997" stroke="#56CCC3" stroke-width="3" stroke-linecap="round"/>
+                                            <path d="M17 17L2 1.99997" stroke="#56CCC3" stroke-width="3" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="buisness__form-card-note-title">Аннотация</div>
+                                    <div class="buisness__form-card-note-text" data-simplebar data-simplebar-auto-hide="false">Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования для власти, бизнеса и профессионального сообщества. В рамках «Августовского педсовета онлайн» будет подведен итог анализа работы региона в первом этапе пандемии и будут обсуждены вопросы подготовки системы образования к новому учебному году для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования подготовки системы Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования для власти, бизнеса и профессионального сообщества. В рамках «Августовского педсовета онлайн» будет подведен итог анализа работы региона в первом этапе пандемии и будут обсуждены вопросы подготовки системы образования к новому учебному году для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования подготовки системы</div>
+                                </div>
                                 <div class="buisness__form-card-date">
                                     <div class="buisness__form-card-day">14.09</div>
                                     <div class="buisness__form-card-time">10:00 - 11:00</div>
@@ -409,6 +445,7 @@
                                             Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в трудной жизненной ситуации
                                         </p>
                                     </div>
+                                    <div class="buisness__form-card-read">читать аннотацию</div>
                                     <div class="buisness__form-card-tag">художественно-эстетическое и трудовое образование</div>
                                     <div class="buisness__form-card-tag">ВОСПИТАНИЕ</div>
                                     <div class="buisness__form-card-tag">управление качеством образования</div>
@@ -466,6 +503,16 @@
                                 </div>
                             </div>
                             <div class="buisness__form-card">
+                                <div class="buisness__form-card-note">
+                                    <div class="buisness__form-card-note-close">
+                                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2 17L17 1.99997" stroke="#56CCC3" stroke-width="3" stroke-linecap="round"/>
+                                            <path d="M17 17L2 1.99997" stroke="#56CCC3" stroke-width="3" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="buisness__form-card-note-title">Аннотация</div>
+                                    <div class="buisness__form-card-note-text" data-simplebar data-simplebar-auto-hide="false">Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования для власти, бизнеса и профессионального сообщества. В рамках «Августовского педсовета онлайн» будет подведен итог анализа работы региона в первом этапе пандемии и будут обсуждены вопросы подготовки системы образования к новому учебному году для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования подготовки системы Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования для власти, бизнеса и профессионального сообщества. В рамках «Августовского педсовета онлайн» будет подведен итог анализа работы региона в первом этапе пандемии и будут обсуждены вопросы подготовки системы образования к новому учебному году для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования подготовки системы</div>
+                                </div>
                                 <div class="buisness__form-card-date">
                                     <div class="buisness__form-card-day">14.09</div>
                                     <div class="buisness__form-card-time">10:00 - 11:00</div>
@@ -487,6 +534,7 @@
                                             Распространение эффективных воспитательных практик, новых технологий и методов работы 
                                         </p>
                                     </div>
+                                    <div class="buisness__form-card-read">читать аннотацию</div>
                                     <div class="buisness__form-card-tag">художественно-эстетическое и трудовое образование</div>
                                     <div class="buisness__form-card-tag">ВОСПИТАНИЕ</div>
                                     <div class="buisness__form-card-tag">управление качеством образования</div>
@@ -520,6 +568,16 @@
                                 </div>
                             </div>
                             <div class="buisness__form-card">
+                                <div class="buisness__form-card-note">
+                                    <div class="buisness__form-card-note-close">
+                                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2 17L17 1.99997" stroke="#56CCC3" stroke-width="3" stroke-linecap="round"/>
+                                            <path d="M17 17L2 1.99997" stroke="#56CCC3" stroke-width="3" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="buisness__form-card-note-title">Аннотация</div>
+                                    <div class="buisness__form-card-note-text" data-simplebar data-simplebar-auto-hide="false">Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования для власти, бизнеса и профессионального сообщества. В рамках «Августовского педсовета онлайн» будет подведен итог анализа работы региона в первом этапе пандемии и будут обсуждены вопросы подготовки системы образования к новому учебному году для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования подготовки системы Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования для власти, бизнеса и профессионального сообщества. В рамках «Августовского педсовета онлайн» будет подведен итог анализа работы региона в первом этапе пандемии и будут обсуждены вопросы подготовки системы образования к новому учебному году для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования подготовки системы</div>
+                                </div>
                                 <div class="buisness__form-card-date">
                                     <div class="buisness__form-card-day">14.09</div>
                                     <div class="buisness__form-card-time">10:00 - 11:00</div>
@@ -541,6 +599,7 @@
                                             Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в трудной жизненной ситуации
                                         </p>
                                     </div>
+                                    <div class="buisness__form-card-read">читать аннотацию</div>
                                     <div class="buisness__form-card-tag">художественно-эстетическое и трудовое образование</div>
                                     <div class="buisness__form-card-tag">ВОСПИТАНИЕ</div>
                                     <div class="buisness__form-card-tag">управление качеством образования</div>
@@ -598,6 +657,16 @@
                                 </div>
                             </div>
                             <div class="buisness__form-card">
+                                <div class="buisness__form-card-note">
+                                    <div class="buisness__form-card-note-close">
+                                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2 17L17 1.99997" stroke="#56CCC3" stroke-width="3" stroke-linecap="round"/>
+                                            <path d="M17 17L2 1.99997" stroke="#56CCC3" stroke-width="3" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="buisness__form-card-note-title">Аннотация</div>
+                                    <div class="buisness__form-card-note-text" data-simplebar data-simplebar-auto-hide="false">Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования для власти, бизнеса и профессионального сообщества. В рамках «Августовского педсовета онлайн» будет подведен итог анализа работы региона в первом этапе пандемии и будут обсуждены вопросы подготовки системы образования к новому учебному году для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования подготовки системы Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования для власти, бизнеса и профессионального сообщества. В рамках «Августовского педсовета онлайн» будет подведен итог анализа работы региона в первом этапе пандемии и будут обсуждены вопросы подготовки системы образования к новому учебному году для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования подготовки системы</div>
+                                </div>
                                 <div class="buisness__form-card-date">
                                     <div class="buisness__form-card-day">14.09</div>
                                     <div class="buisness__form-card-time">10:00 - 11:00</div>
@@ -619,6 +688,7 @@
                                             Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в трудной жизненной ситуации
                                         </p>
                                     </div>
+                                    <div class="buisness__form-card-read">читать аннотацию</div>
                                     <div class="buisness__form-card-tag">художественно-эстетическое и трудовое образование</div>
                                     <div class="buisness__form-card-tag">ВОСПИТАНИЕ</div>
                                     <div class="buisness__form-card-tag">управление качеством образования</div>
@@ -679,6 +749,16 @@
                         <div class="buisness__form-cards-hidden">
                             <div class="buisness__form-cards-inner">
                                 <div class="buisness__form-card">
+                                    <div class="buisness__form-card-note">
+                                        <div class="buisness__form-card-note-close">
+                                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M2 17L17 1.99997" stroke="#56CCC3" stroke-width="3" stroke-linecap="round"/>
+                                                <path d="M17 17L2 1.99997" stroke="#56CCC3" stroke-width="3" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="buisness__form-card-note-title">Аннотация</div>
+                                        <div class="buisness__form-card-note-text" data-simplebar data-simplebar-auto-hide="false">Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования для власти, бизнеса и профессионального сообщества. В рамках «Августовского педсовета онлайн» будет подведен итог анализа работы региона в первом этапе пандемии и будут обсуждены вопросы подготовки системы образования к новому учебному году для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования подготовки системы Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования для власти, бизнеса и профессионального сообщества. В рамках «Августовского педсовета онлайн» будет подведен итог анализа работы региона в первом этапе пандемии и будут обсуждены вопросы подготовки системы образования к новому учебному году для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования подготовки системы</div>
+                                    </div>
                                     <div class="buisness__form-card-date">
                                         <div class="buisness__form-card-day">14.09</div>
                                         <div class="buisness__form-card-time">10:00 - 11:00</div>
@@ -700,6 +780,7 @@
                                                 Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в трудной жизненной ситуации
                                             </p>
                                         </div>
+                                        <div class="buisness__form-card-read">читать аннотацию</div>
                                         <div class="buisness__form-card-tag">художественно-эстетическое и трудовое образование</div>
                                         <div class="buisness__form-card-tag">ВОСПИТАНИЕ</div>
                                         <div class="buisness__form-card-tag">управление качеством образования</div>
@@ -757,6 +838,16 @@
                                     </div>
                                 </div>
                                 <div class="buisness__form-card">
+                                    <div class="buisness__form-card-note">
+                                        <div class="buisness__form-card-note-close">
+                                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M2 17L17 1.99997" stroke="#56CCC3" stroke-width="3" stroke-linecap="round"/>
+                                                <path d="M17 17L2 1.99997" stroke="#56CCC3" stroke-width="3" stroke-linecap="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="buisness__form-card-note-title">Аннотация</div>
+                                        <div class="buisness__form-card-note-text" data-simplebar data-simplebar-auto-hide="false">Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования для власти, бизнеса и профессионального сообщества. В рамках «Августовского педсовета онлайн» будет подведен итог анализа работы региона в первом этапе пандемии и будут обсуждены вопросы подготовки системы образования к новому учебному году для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования подготовки системы Распространение эффективных воспитательных практик, новых технологий и методов работы для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования для власти, бизнеса и профессионального сообщества. В рамках «Августовского педсовета онлайн» будет подведен итог анализа работы региона в первом этапе пандемии и будут обсуждены вопросы подготовки системы образования к новому учебному году для повышения качества жизни детей и семей с детьми, находящихся в августовский педсовет онлайн» станет коммуникационной площадкой для обмена инициативами в сфере образования подготовки системы</div>
+                                    </div>
                                     <div class="buisness__form-card-date">
                                         <div class="buisness__form-card-day">14.09</div>
                                         <div class="buisness__form-card-time">10:00 - 11:00</div>
@@ -778,6 +869,7 @@
                                                 Распространение эффективных воспитательных практик, новых технологий и методов работы 
                                             </p>
                                         </div>
+                                        <div class="buisness__form-card-read">читать аннотацию</div>
                                         <div class="buisness__form-card-tag">художественно-эстетическое и трудовое образование</div>
                                         <div class="buisness__form-card-tag">ВОСПИТАНИЕ</div>
                                         <div class="buisness__form-card-tag">управление качеством образования</div>
@@ -878,8 +970,10 @@
             </a>
         </div>
     </footer>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
     <script src="assets/js/main.min.js"></script>
 </body>
 </html>

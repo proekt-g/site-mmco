@@ -245,6 +245,20 @@
         }
     }
 }
+.simplebar-track {
+    background-color: #DADADA;
+    border-radius: 10px;
+}
+
+.simplebar-scrollbar {
+    background-color: #828282;
+    border-radius: 10px;
+}
+
+.simplebar-scrollbar::before {
+    background-color: #828282;
+    border-radius: 10px;
+}
 .new{
     position: relative;
     z-index: 1;
@@ -748,11 +762,13 @@
                         position: absolute;
                         visibility: hidden;
                     }
-                    &-label{
+                    &-label,
+                    &-tag{
                         margin: 3.5px;
                         border: 1px solid #828282;
                         border-radius: 31px;
-                        display: block;
+                        display: flex;
+                        align-items: center;
                         padding: 9px 19px;
                         cursor: pointer;
                         color: #828282;
@@ -761,7 +777,6 @@
                         text-transform: uppercase;
                         max-width: 310px;
                         text-align: center;
-                        line-height: 130%;
                         @media(max-width: 768px){
                             max-width: 210px;
                             display: inline-block;
@@ -769,7 +784,7 @@
                             padding: 9px 15px;
                         }
                         &--active{
-                            border: transparent;
+                            border: 1px solid transparent;
                             background: #EF75D9;
                             color: #fff;
                         }
@@ -801,11 +816,59 @@
                 flex-direction: column;
                 position: relative;
                 z-index: 9;
+                min-height: 350px;
                 @media(max-width: 1180px){
                     flex: 0 1 48%;
                 }
                 @media(max-width: 768px){
                     flex: 0 1 100%; 
+                }
+                &-note{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    padding: 44px 14px 40px 34px;
+                    background-color: #fff;
+                    z-index: 10;
+                    border-radius: 30px;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: .3s;
+                    &--active{
+                        opacity: 1;
+                        pointer-events: auto;
+                    }
+                    &-close{
+                        top: 24px;
+                        right: 35px;
+                        position: absolute;
+                        cursor: pointer;
+                        transition: .3s;
+                        svg path {
+                            transition: .3s;
+                        }
+                        &:hover{
+                            svg path {
+                                stroke: #ef75d9;
+                            }
+                        }
+                    }
+                    &-title{
+                        font-weight: bold;
+                        font-size: 16px;
+                        color: #828282;
+                        margin-bottom: 11px;
+                    }
+                    &-text{
+                        font-weight: bold;
+                        font-size: 17px;
+                        line-height: 120%;
+                        overflow: auto;
+                        height: calc(100% - 20px);
+                        padding-right: 20px;
+                    }
                 }
                 &-inner{
                     flex-grow: 1;
@@ -822,8 +885,10 @@
                     z-index: 20;
                     padding-bottom: 7px;
                     overflow: hidden;
+                    pointer-events: none;
                     &--active{
                         opacity: 1;
+                        pointer-events: auto;
                     }
                     &-inner{
                         display: flex;
@@ -899,17 +964,24 @@
                     }
                 }
                 &-title{
-                    margin: 15px 0 20px;
+                    margin: 15px 0 10px;
                     font-size: 17px;
                     font-weight: 700;
                     line-height: 20.4px;
+                }
+                &-read{
+                    font-weight: 500;
+                    font-size: 14px;
+                    text-decoration-line: underline;
+                    cursor: pointer;
+                    display: inline-block;
                 }
                 &-tag{
                     color: #ef75d9;
                     font-size: 10px;
                     font-weight: 700;
                     text-transform: uppercase;
-                    margin-top: 12px;
+                    margin-top: 17px;
                     @media(max-width: 1180px){
                         font-size: 9px;
                     }

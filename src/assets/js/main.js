@@ -459,7 +459,10 @@ window.addEventListener('load', function() {
         $buisnessFormDayMobailDef = document.querySelector('.buisness__form-day-mobail-def'),
         $buisnessFormDayMobailLabel = document.querySelectorAll('.buisness__form-day-mobail-label'), 
         $buisnessFormCardModerAvatar = document.querySelectorAll('.buisness__form-card-moder-avatar'),
-        $buisnessFormCardSpeakerAvatar = document.querySelectorAll('.buisness__form-card-speaker-avatar');
+        $buisnessFormCardSpeakerAvatar = document.querySelectorAll('.buisness__form-card-speaker-avatar'), 
+        $buisnessFormCardRead = document.querySelectorAll('.buisness__form-card-read'),
+        $buisnessFormCardNoteClose = document.querySelectorAll('.buisness__form-card-note-close'), 
+        $buisnessFormSwitchListTag = document.querySelectorAll('.buisness__form-switch-list-tag');
 
     let swiperNewPage,
         swiperNewPageParty;
@@ -530,16 +533,24 @@ window.addEventListener('load', function() {
     }
     function clickFilterSwitchTag(modifier){
         if(this.parentNode.querySelector(`.${modifier}`) !== null ) this.parentNode.querySelector(`.${modifier}`).classList.remove(modifier);
-        this.classList.add(modifier);
+        this.classList.toggle(modifier);
     }
     function clickFilterSwitchElement(){
         this.closest('.buisness__form-switch').classList.toggle('buisness__form-switch--active');
-        console.log($(this).parent('.buisness__form-switch').children('.buisness__form-switch-list'));
         $(this).parent('.buisness__form-switch').children('.buisness__form-switch-list').slideToggle(400);
     }
     function clickFilterTag(){
         this.closest('.buisness__form-switch').querySelector('.buisness__form-switch-text').innerHTML = this.textContent;
         clickFilterSwitchElement.bind(this.closest('.buisness__form-switch').querySelector('.buisness__form-switch-text'))();       
+        
+    }
+    function clickFormSwitchListTag(){
+        this.classList.toggle('buisness__form-switch-list-tag--active');
+        switch(document.querySelectorAll('.buisness__form-switch-list-tag--active').length){
+            case 0: this.closest('.buisness__form-switch').querySelector('.buisness__form-switch-text').innerHTML = this.closest('.buisness__form-switch').querySelector('.buisness__form-switch-text').dataset.defaultText; break;
+            case 1: this.closest('.buisness__form-switch').querySelector('.buisness__form-switch-text').innerHTML = document.querySelector('.buisness__form-switch-list-tag--active').textContent; break;
+            default: this.closest('.buisness__form-switch').querySelector('.buisness__form-switch-text').innerHTML = this.closest('.buisness__form-switch').querySelector('.buisness__form-switch-text').dataset.selectText + document.querySelectorAll('.buisness__form-switch-list-tag--active').length;
+        }
     }
     function clickFilterMore(){
         $('.buisness__form-cards-hidden').slideToggle(400);
@@ -559,26 +570,19 @@ window.addEventListener('load', function() {
     }
     function focusModalAvatar(){
         let _this = this;
-        // if(this.closest('.buisness__form-card').querySelector('.buisness__form-card-modal--active') === null){
         _this.closest('.buisness__form-card').querySelector('.buisness__form-card-modal-avatar-img').setAttribute('src', _this.querySelector('.buisness__form-card-img').src);
         _this.closest('.buisness__form-card').querySelector('.buisness__form-card-modal-name').innerHTML = _this.dataset.avatarName;
         _this.closest('.buisness__form-card').querySelector('.buisness__form-card-modal-text').innerHTML = _this.dataset.avatarInfo;
         _this.closest('.buisness__form-card').querySelector('.buisness__form-card-modal').classList.toggle('buisness__form-card-modal--active');
         _this.querySelector('.buisness__form-card-img').classList.toggle('buisness__form-card-img--hidden');
-        // }else{
-        //     setTimeout(function(){
-        //         _this.closest('.buisness__form-card').querySelector('.buisness__form-card-modal-avatar-img').setAttribute('src', _this.querySelector('.buisness__form-card-img').src);
-        //         _this.closest('.buisness__form-card').querySelector('.buisness__form-card-modal-name').innerHTML = _this.dataset.avatarName;
-        //         _this.closest('.buisness__form-card').querySelector('.buisness__form-card-modal-text').innerHTML = _this.dataset.avatarInfo;
-        //         _this.closest('.buisness__form-card').querySelector('.buisness__form-card-modal').classList.toggle('buisness__form-card-modal--active');
-        //     }, 300);
-        // }
     }
     function blurModalAvatar(){
         this.closest('.buisness__form-card').querySelector('.buisness__form-card-modal--active').classList.remove('buisness__form-card-modal--active');
         this.querySelector('.buisness__form-card-img').classList.toggle('buisness__form-card-img--hidden');
     }
-
+    function clickNote(){
+        this.closest('.buisness__form-card').querySelector('.buisness__form-card-note').classList.toggle('buisness__form-card-note--active');
+    }
     if($menuBurger !== null) $menuBurger.addEventListener('click', clickBurgerMenu, false);
     if($buisnessFormDayLabel.length !== 0) $buisnessFormDayLabel.forEach(function(item){
         item.addEventListener('click', clickFilterSwitchTag.bind(item, 'buisness__form-day-label--active'), false);
@@ -605,6 +609,15 @@ window.addEventListener('load', function() {
         item.addEventListener('focus', focusModalAvatar, false);
         item.addEventListener('blur', blurModalAvatar, false);
     });
+    if($buisnessFormCardRead.length !== null) $buisnessFormCardRead.forEach(function(item){
+        item.addEventListener('click', clickNote, false);
+    });
+    if($buisnessFormCardNoteClose.length !== null) $buisnessFormCardNoteClose.forEach(function(item){
+        item.addEventListener('click', clickNote, false);
+    });
+    if($buisnessFormSwitchListTag.length !== 0) $buisnessFormSwitchListTag.forEach(function(item){
+        item.addEventListener('click', clickFormSwitchListTag, false);
+    });
     $('a[href^="#"]').on('click', function(event) {
         if (String(this).slice(-1) !== '#') {
             event.preventDefault();
@@ -614,5 +627,6 @@ window.addEventListener('load', function() {
             $('html, body').animate({ scrollTop: dn - 155}, 1000);
         }
     });
+    
     // /new.js **************************
 });
